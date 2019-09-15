@@ -32,12 +32,12 @@
 
   }
   &__slide{
+    
     position:relative;
     margin:0 auto;
-    background-color:rgba(white,1);
+    background-color:rgba(grey,0.05);
     width:600px;
     height:400px;
-    background-image:url("/ep_naturalwhite.png");
     // box-shadow:2px 2px 1px rgba(black,0.2);
     &-title{
       position:absolute;
@@ -56,6 +56,8 @@
       color:grey;
       word-break : break-all;
       // box-shadow:0px 0px 5px rgba(black,0.5);
+      line-height:20px;
+      
 
     }
 
@@ -89,7 +91,7 @@
       bottom:-60px;left:-60px;
       width:540px;
       height:360px;
-      box-shadow:10px 10px 6px rgba(black,0.5);
+      box-shadow:8px 8px 5px rgba(black,0.5);
       &-frame{
         overflow:hidden;
         width:100%;
@@ -153,6 +155,8 @@
     display:flex;
   }
   &-image{
+    filter: grayscale(10%);
+
     padding:5px;
     width:100px;
     height:100px;

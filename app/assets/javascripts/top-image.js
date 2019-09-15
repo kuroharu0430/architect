@@ -14,10 +14,10 @@ $(function(){
     $.each(typeWritter,function(index,val){
       letter = $("<span/>").text(val).css({opacity:0});
        $('.top__screen-title').append(letter)
-      letter.delay(index*500);
-      letter.animate({opacity:1},10);
+      letter.delay(index*200);
+      letter.animate({opacity:1},1000);
     })
-    setTimeout(dot,2000)
+    setTimeout(dot,2800)
     
   var imageReload = function(){
     $('.top__screen').fadeOut()
@@ -34,6 +34,10 @@ $(function(){
             top_slide.eq(i).show('slide',{direction:"left"},500,function(){
               top_slide.eq(i).show('slide',{direction:"left"},500)
                 top_heading.eq(i).show('slide',{direction:"left"},500,function(){
+
+                  $('.card').removeClass('select')
+                  $('.card').eq(i).addClass('select')
+
               setTimeout(fadeOut,5000)
                top_slide.eq(i).animate({'left':'0px'},5000,'linear')
               $('.heading-virtical').show('slide',{direction:'up'},200,function(){
@@ -61,8 +65,4 @@ $(function(){
         }
        var stop = setTimeout(slide,500)
     }
-  // var page_reload =function(){
-  //   window.location.reload()
-  // }
-  // setInterval(page_reload,40000)
 })

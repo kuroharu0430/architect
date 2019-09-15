@@ -38,7 +38,7 @@
     font-size:100px;
     &-title{
       // display:none;
-      font-size:100px;
+      font-size:40px;
       position:relative;
         mix-blend-mode:difference;
         color:white;
@@ -100,7 +100,6 @@
     width:200px;
     border-bottom:5px solid black;
     display:none;
-
   }
   &-name{
     text-shadow:3px 3px 3px rgba(black, 1);
