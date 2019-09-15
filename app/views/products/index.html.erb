@@ -11,16 +11,16 @@
   </div> 
 
   <div class="top__slide">
-    <div class="top__slide-flame">
+    <div class="top__slide-frame">
       <% @products.each do |product| %>
-        <div class="top__slide-flame-heading">
+        <div class="top__slide-frame-heading">
         </div>
         <div class="heading-virtical"></div>
         <div class="heading-cross"></div>
         <div class="heading-name"><%=product.name %></div>
         <div class="heading-title"><%=product.title%></div>
 
-        <%=image_tag product.image.url, class:"top__slide-flame-image"%>
+        <%=image_tag product.image.url, class:"top__slide-frame-image"%>
       <%end%>
     </div>
   </div>

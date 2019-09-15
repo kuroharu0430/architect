@@ -2,6 +2,10 @@ body{
   font-family: 'Sawarabi Mincho', sans-serif;
 }
 
+*{
+  box-sizing: border-box
+}
+
 nav{
   background-color:rgba(white,0.2);
   width:100%;

@@ -13,10 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "./mixin/mixin";
 @import "./modules/home";
 @import "./modules/layouts";
 @import "./modules/products";
 @import "./modules/show";
 @import "./modules/form";
 @import "./modules/contact";
-@import "./mixin/mixin";
+@import "./modules/users";

@@ -26,8 +26,8 @@ $(function(){
 
   
   var slideReload = function(){
-    var top_slide = $('.top__slide-flame-image');
-    var top_heading = $('.top__slide-flame-heading');
+    var top_slide = $('.top__slide-frame-image');
+    var top_heading = $('.top__slide-frame-heading');
      $('.top__image').fadeOut(500);
           i=0
           var slide =function(){
@@ -50,14 +50,12 @@ $(function(){
                 window.location.reload()
               }else{
                 top_heading.eq(i).hide('slide',{direction:"left"},500);
-                $('.heading-name').eq(i).hide('slide',{direction:'left'},500)
-                $('.heading-title').eq(i).hide('slide',{direction:'top'},500)
+                $('.heading-name').eq(i).hide('slide',{direction:'left'},100)
+                $('.heading-title').eq(i).hide('slide',{direction:'top'},100)
                 i++
                 slide()
               }
-
-            }
-              
+            }              
           })
             
         }
