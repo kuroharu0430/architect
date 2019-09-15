@@ -1,0 +1,45 @@
+<div class="show">
+  <div class="container">
+    <%= render 'layouts/nav'%>
+    <div class="show__slide">
+    <div class="show__slide-title">
+      <h2 class="show-name"><%= @product.name%></h2>
+      <h3 class="show-title"><%= @product.title%></h3>
+    </div>
+    <div class="show__slide-data">
+      多分これは縄文時代に作った遺跡をリフォームして、現代風に変えた建築物。入り口がたて穴なのが興味をそそります。あと屋根には登れません。
+    </div>
+      <div class="show__slide-left">
+        <div class="show__slide-left-flame">
+        <i class="far fa-caret-square-left"></i>
+        <i class="far fa-caret-square-right"></i>
+          <% @works.each do |work|%>
+            <%=image_tag work.image.url ,class:"show__slide-left-flame-image"%>
+           <%end%>
+        </div>
+       </div>
+        <div class="show__slide-right">
+          <div class="show__slide-right-flame">
+            <% @works.each do |work|%>
+              <%=image_tag work.image.url ,class:"show__slide-right-flame-image"%>
+           <%end%>
+
+          </div>
+      </div>
+    </div>
+    <div class="slide_bar">
+        <div class="slide_bar-prev"></div>
+        <div class="slide_bar-wrapper">
+      <% @works.each do |work|%>
+          <%=image_tag work.image.url ,class:"slide_bar-image"%>
+      <%end%>
+        </div>
+        <div class="slide_bar-next">
+    </div>
+
+  </div>
+</div>
+
+
+<%= link_to "work_new" ,new_product_work_path(@product), class:"buttom"%>
+    <%=link_to "edit" ,edit_product_path(@product), class:"buttom"%>
