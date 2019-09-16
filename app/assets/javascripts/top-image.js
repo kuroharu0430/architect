@@ -1,16 +1,17 @@
 $(function(){
 
+  $('nav').click(function(){
+  })
+
+
   var dot =function(){
-    // $('.top__screen-title').show("slide",{direction:"left"},function(){
-      $('.dot').fadeIn(1,function(){
-        $('.dot').addClass('shrink')
-      // })
       setTimeout(imageReload,2000)
-    })
     }
+
 
     var typeWritter = $('.top__screen-title p').html().split("");
     $('.top__screen-title p').html("")
+
     $.each(typeWritter,function(index,val){
       letter = $("<span/>").text(val).css({opacity:0});
        $('.top__screen-title').append(letter)
@@ -20,8 +21,14 @@ $(function(){
     setTimeout(dot,2800)
     
   var imageReload = function(){
-    $('.top__screen').fadeOut()
-    setTimeout(slideReload,3000)
+    $('.top__screen').fadeOut(function(){
+      $('.hand-writing').animate({'marginTop':"0"},700,'swing',function(){
+        $('.hand-writing').addClass('expansion').delay(1000).queue(function(){
+          $(this).removeClass('grey').dequeue();
+        })
+      })
+    })
+    setTimeout(slideReload,10000)
   }
 
   

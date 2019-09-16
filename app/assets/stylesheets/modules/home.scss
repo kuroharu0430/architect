@@ -6,23 +6,6 @@
   position:absolute;
 }
 
-.dot{
-  position:absolute;
-  bottom:0;right:0;
-  display:none;
-  width:30px;
-  height:30px;
-  // border-radius:50%;
-  bottom:10%;right:0;
-  background:white;
-  transform: scale(100,100);
-  color:white;
-
-}
-  .shrink{
-    transform: scale(0.5,0.5);
-    transition-duration: 0.2s;
-  }
 
 .top{
   position:relative;
@@ -49,8 +32,29 @@
   }
   &__image{
     @include top;
-    
+    display:flex;
+    justify-content: center;
+    align-items:center;
   }
+  .hand-writing{
+    margin-top:-500px;
+    transform: scale(0.01,0.01);
+  }
+  .expansion{
+    margin-top:150px;
+    transform: scale(0.20,0.20);
+    transition-duration:1s;
+  }
+
+  .grey{
+    filter: grayscale(100%);
+    opacity:0.3;
+    border-radius:50%;
+  }
+
+
+
+
   &__slide{
     margin:0;
     z-index:-1;

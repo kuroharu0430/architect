@@ -76,6 +76,7 @@
         box-shadow:5px 5px 3px rgba(black,0.5);
         display:flex;
         &-image{
+          filter: grayscale(100%);
           display:none;
           min-height: 100%;
           width: 100%;
