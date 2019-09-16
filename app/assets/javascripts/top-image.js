@@ -1,24 +1,14 @@
 $(function(){
 
-  $('nav').click(function(){
-  })
-
-
-  var dot =function(){
-      setTimeout(imageReload,2000)
-    }
-
-
     var typeWritter = $('.top__screen-title p').html().split("");
     $('.top__screen-title p').html("")
 
     $.each(typeWritter,function(index,val){
       letter = $("<span/>").text(val).css({opacity:0});
        $('.top__screen-title').append(letter)
-      letter.delay(index*200);
+      letter.delay(index*100);
       letter.animate({opacity:1},1000);
     })
-    setTimeout(dot,2800)
     
   var imageReload = function(){
     $('.top__screen').fadeOut(function(){
@@ -30,12 +20,12 @@ $(function(){
     })
     setTimeout(slideReload,10000)
   }
-
+  setTimeout(imageReload,3500)
   
   var slideReload = function(){
     var top_slide = $('.top__slide-frame-image');
     var top_heading = $('.top__slide-frame-heading');
-     $('.top__image').fadeOut(500);
+     $('.top__image').fadeOut(1500).css('filter','brightness(200%)');
           i=0
           var slide =function(){
             top_slide.eq(i).show('slide',{direction:"left"},500,function(){
@@ -47,13 +37,13 @@ $(function(){
 
               setTimeout(fadeOut,5000)
                top_slide.eq(i).animate({'left':'0px'},5000,'linear')
-              $('.heading-virtical').show('slide',{direction:'up'},200,function(){
-                $('.heading-cross').show('slide',{direction:'left'},200,function(){
+              // $('.heading-virtical').show('slide',{direction:'up'},200,function(){
+              //   $('.heading-cross').show('slide',{direction:'left'},200,function(){
                   
                   $('.heading-name').eq(i).show('slide',{direction:'left'},500)
                   $('.heading-title').eq(i).show('slide',{direction:'up'},500)
-                })
-              })
+                // })
+              // })
             })
             var fadeOut = function(){
               // top_slide.eq(i).hide('slide',{direction:"right"},500);

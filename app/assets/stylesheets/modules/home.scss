@@ -35,10 +35,13 @@
     display:flex;
     justify-content: center;
     align-items:center;
+    background: linear-gradient(rgba(white,0.5), rgba(gray ,0.5));
   }
   .hand-writing{
     margin-top:-500px;
     transform: scale(0.01,0.01);
+      box-shadow: 15px 15px 15px 15px transparent;
+
   }
   .expansion{
     margin-top:150px;
@@ -48,11 +51,9 @@
 
   .grey{
     filter: grayscale(100%);
-    opacity:0.3;
+    opacity:0.5;
     border-radius:50%;
   }
-
-
 
 
   &__slide{
@@ -89,42 +90,29 @@
 }
 
 .heading{
-  &-virtical{
-    display:none;
-    position:absolute;
-    top:90px;left:60px;
-    height:200px;
-    border-right:5px solid black;
-    display:none;
-  }
-  &-cross{
-    display:none;
-    position:absolute;
-    top:250px;left:30px;
-    width:200px;
-    border-bottom:5px solid black;
-    display:none;
-  }
+
   &-name{
     text-shadow:3px 3px 3px rgba(black, 1);
+    mix-blend-mode:hard-light;
+    color:white;
     display:none;
     position:absolute;
     top:100px;left:70px;
     font-size:40px;
-    mix-blend-mode:hard-light;
-    color:white;
     display:none;
 
   }
   &-title{
-    mix-blend-mode:hard-light;
     display:none;
     position:absolute;
     top:260px;left:90px;
     font-size:20px;
-    text-shadow:3px 3px 2px rgba(white, 1);
-    color:black;
     display:none;
+    text-shadow:3px 3px 3px rgba(black, 1);
+    mix-blend-mode:hard-light;
+    color:white;
+    width:300px;
+
   }
 }
 

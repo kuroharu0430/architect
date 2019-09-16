@@ -2,8 +2,8 @@
 <div class="top">
   <div class="top__screen">
     <div class="top__screen-title">
-      <p>子どもの心に残る</p>
-      <p>空間づくりを</p>
+      <p>子どもの心に残る
+           空間づくりを</p>
     </div>
   </div>
   <div class="top__image">
@@ -15,10 +15,10 @@
       <% @products.each do |product| %>
         <div class="top__slide-frame-heading">
         </div>
-        <div class="heading-virtical"></div>
-        <div class="heading-cross"></div>
+        <%# <div class="heading-virtical"></div>
+        <div class="heading-cross"></div> %>
         <div class="heading-name"><%=product.name %></div>
-        <div class="heading-title"><%=product.title%></div>
+        <div class="heading-title"><%=product.text%></div>
 
         <%=image_tag product.image.url, class:"top__slide-frame-image"%>
       <%end%>
