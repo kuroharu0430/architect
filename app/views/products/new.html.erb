@@ -5,12 +5,12 @@
   <%=f.label :name ,"name",class:"label"%>
   <%= f.text_field :name ,class:"input"%>
   <%=f.label :text ,"text",class:"label"%>
-  <%= f.text_field :text,class:"input"%>
+  <%= f.text_area :text,class:"input"%>
   <%=f.label :image ,"image",class:"label"%>
   <%= f.file_field :image ,class:"field"%>
 
   <%=f.label :date ,"竣工年月日",class:"label"%>
-  <%= f.date_select :date,class:"input"%>
+  <%= f.date_select :date,{use_two_digit_numbers:true},class:"input"%>
 
   <%=f.label :place ,"所在地",class:"label"%>
   <%= f.text_field :place,class:"input"%>

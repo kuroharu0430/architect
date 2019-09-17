@@ -1,7 +1,7 @@
 $(function(){
 
-    var typeWritter = $('.top__screen-title p').html().split("");
-    $('.top__screen-title p').html("")
+    var typeWritter = $('.top__screen-title h1').html().split("");
+    $('.top__screen-title h1').html("")
 
     $.each(typeWritter,function(index,val){
       letter = $("<span/>").text(val).css({opacity:0});
@@ -13,11 +13,10 @@ $(function(){
   var imageReload = function(){
     $('.top__screen').fadeOut(function(){
       $('.hand-writing').animate({'marginTop':"0"},700,'swing',function(){
-        $('.hand-writing').addClass('expansion').delay(1000).queue(function(){
-          $(this).removeClass('grey').dequeue();
-        })
+        $('.hand-writing').addClass('expansion');
       })
     })
+
     setTimeout(slideReload,10000)
   }
   setTimeout(imageReload,3500)
@@ -25,10 +24,10 @@ $(function(){
   var slideReload = function(){
     var top_slide = $('.top__slide-frame-image');
     var top_heading = $('.top__slide-frame-heading');
-     $('.top__image').fadeOut(1500).css('filter','brightness(200%)');
+     $('.top__image').fadeOut(1500)
           i=0
           var slide =function(){
-            top_slide.eq(i).show('slide',{direction:"left"},500,function(){
+            top_slide.eq(i).animate({opacity:1},2000,function(){
               top_slide.eq(i).show('slide',{direction:"left"},500)
                 top_heading.eq(i).show('slide',{direction:"left"},500,function(){
 
@@ -40,20 +39,22 @@ $(function(){
               // $('.heading-virtical').show('slide',{direction:'up'},200,function(){
               //   $('.heading-cross').show('slide',{direction:'left'},200,function(){
                   
-                  $('.heading-name').eq(i).show('slide',{direction:'left'},500)
-                  $('.heading-title').eq(i).show('slide',{direction:'up'},500)
+                  $('.heading-name').eq(i).show('slide',{direction:'left'},300,function(){
+                    $('.heading-title').eq(i).show('slide',{direction:'up'},300)
+                  })
                 // })
               // })
             })
             var fadeOut = function(){
-              // top_slide.eq(i).hide('slide',{direction:"right"},500);
-              if (i == top_slide.length-1){
-                window.location.reload()
+              console.log(i)
+              top_heading.eq(i).animate({opacity:0},2000)
+              $('.heading-name').eq(i).hide('slide',{direction:'left'},100)
+              $('.heading-title').eq(i).hide('slide',{direction:'top'},100)
+              i++
+              console.log(i)
+              if (i == top_slide.length){
+                setTimeout(window.location.reload(),10000)
               }else{
-                top_heading.eq(i).hide('slide',{direction:"left"},500);
-                $('.heading-name').eq(i).hide('slide',{direction:'left'},100)
-                $('.heading-title').eq(i).hide('slide',{direction:'top'},100)
-                i++
                 slide()
               }
             }              

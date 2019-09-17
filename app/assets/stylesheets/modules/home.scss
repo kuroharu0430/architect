@@ -6,7 +6,6 @@
   position:absolute;
 }
 
-
 .top{
   position:relative;
   margin-top:50px;
@@ -35,24 +34,43 @@
     display:flex;
     justify-content: center;
     align-items:center;
-    background: linear-gradient(rgba(white,0.5), rgba(gray ,0.5));
+    background: linear-gradient(rgba(white,0.5), rgba(lightgray ,0.5));
   }
   .hand-writing{
     margin-top:-500px;
     transform: scale(0.01,0.01);
       box-shadow: 15px 15px 15px 15px transparent;
-
+      filter: grayscale(100%);
+      border-radius:50%;
   }
   .expansion{
     margin-top:150px;
     transform: scale(0.20,0.20);
-    transition-duration:1s;
-  }
+    transition-duration:2s;
 
-  .grey{
-    filter: grayscale(100%);
-    opacity:0.5;
-    border-radius:50%;
+    animation-name:add_color;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-delay:3s;
+  }
+  @keyframes add_color {
+    0%{
+      filter:brightness(100%);
+      filter:grayscale(100%);
+    }
+    10%{
+      border-radius:0;
+      filter:brightness(130%);
+    }
+    50%{
+      filter:brightness(90%);
+    }
+    100%{
+      filter:grayscale(0%);
+      filter:brightness(120%);
+      border-radius:0;
+
+    }
   }
 
 
@@ -68,11 +86,14 @@
       
       &-image{
         position:absolute;
+        top:0;bottom:0;
+        margin: auto 0;
+        // display:none;
+        opacity:0;
         left:-150px;
         width:calc(100vw + 150px);
         height:auto;
         z-index:-1;
-        display:none;
       }
       &-heading{
         display:none;
@@ -97,21 +118,25 @@
     color:white;
     display:none;
     position:absolute;
-    top:100px;left:70px;
+    top:180px;left:70px;
     font-size:40px;
+    line-height:50px;
     display:none;
-
+    height: auto;
+    // text-decoration:underline; 
+    // border-bottom:5px solid white;
   }
   &-title{
     display:none;
     position:absolute;
-    top:260px;left:90px;
-    font-size:20px;
+    top:220px;left:100px;
+    font-size:30px;
+    width:500px;
+    line-height: 60px;
     display:none;
     text-shadow:3px 3px 3px rgba(black, 1);
     mix-blend-mode:hard-light;
     color:white;
-    width:300px;
 
   }
 }

@@ -2,12 +2,12 @@
 <div class="top">
   <div class="top__screen">
     <div class="top__screen-title">
-      <p>子どもの心に残る
-           空間づくりを</p>
+      <h1>子どもの心に残る<br>
+          空間づくりを</h1>
     </div>
   </div>
   <div class="top__image">
-      <%=image_tag '/colored.jpg', class:'hand-writing grey'%>
+      <%=image_tag '/colored.jpg', class:'hand-writing'%>
   </div> 
 
   <div class="top__slide">
@@ -15,8 +15,6 @@
       <% @products.each do |product| %>
         <div class="top__slide-frame-heading">
         </div>
-        <%# <div class="heading-virtical"></div>
-        <div class="heading-cross"></div> %>
         <div class="heading-name"><%=product.name %></div>
         <div class="heading-title"><%=product.text%></div>
 
@@ -27,9 +25,7 @@
 
 </div>
 
-<%# works %>
 <div class="works">
-  <%# <h2>Works</h2> %>
   <div class="cards">
   <%= render @products %>    
   </div>
@@ -41,18 +37,18 @@
       <%=f.label :name ,"name",class:"label"%>
       <%= f.text_field :name ,class:"input"%>
 
-      <%=f.label :title ,"email",class:"label"%>
+      <%=f.label :email ,"email",class:"label"%>
       <%= f.text_field :email,class:"input"%>
 
-      <%=f.label :text ,"password",class:"label"%>
+      <%=f.label :password ,"password",class:"label"%>
       <%= f.text_field :password,class:"input"%>
 
+      <%=f.label :password_confirmation ,"password",class:"label"%>
+      <%= f.text_field :password_confirmation,class:"input"%>
 
-      <%= f.submit "send" ,class:"buttom"%>
+      <%= f.submit "登録" ,class:"buttom"%>
   </div>
 <%end%>
-
-
 
 <h3>about</h3>
 <h3>flow</h3>
