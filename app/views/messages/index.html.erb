@@ -1,0 +1,23 @@
+<div class="messages">
+  <div class="user-nav">
+    <li>日時</li>
+    <li>user_name</li>
+    <%=link_to "top", root_path%>
+  </div>
+
+  <div class="main">
+    <div class="main__admin">
+    </div>
+    <div class="main__chat">
+    <%= render @messages%>
+    </div>
+    <div class="main__user">
+    </div>
+  </div>
+
+  <div class="messages-form">
+<%= form_with model:[@user, @message], local: true do |f|%> 
+  <%= f.text_field :text ,placeholder:"give me" ,class:'messages-form-text'%>
+  <%= f.submit '送信' ,class:'messages-form-btn'%>
+  <%end%>
+</div>

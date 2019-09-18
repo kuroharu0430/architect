@@ -4,6 +4,11 @@
     <%=link_to "new" ,new_product_path %>
     <%=link_to "about" ,"" %>
     <%=link_to "flow"  ,"" %>
-    <%=link_to "contact" ,""%>
+    <%=link_to "contact" ,user_messages_path(1)%>
+    <%if user_signed_in?%>
+    <%= link_to 'logout', destroy_user_session_path , method:'delete'%>
+    <%else%>
+    <%=link_to "login" ,user_session_path%>
+    <%end%>
   </ul>
 </nav>

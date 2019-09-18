@@ -27,8 +27,7 @@ $(function(){
      $('.top__image').fadeOut(1500)
           i=0
           var slide =function(){
-            top_slide.eq(i).animate({opacity:1},2000,function(){
-              top_slide.eq(i).show('slide',{direction:"left"},500)
+            top_slide.eq(i).animate({opacity:1},1000,function(){
                 top_heading.eq(i).show('slide',{direction:"left"},500,function(){
 
                   $('.card').removeClass('select')
@@ -47,13 +46,18 @@ $(function(){
             })
             var fadeOut = function(){
               console.log(i)
-              top_heading.eq(i).animate({opacity:0},2000)
+              top_heading.eq(i).hide('slide',{direction:'left'},100)
               $('.heading-name').eq(i).hide('slide',{direction:'left'},100)
               $('.heading-title').eq(i).hide('slide',{direction:'top'},100)
+              // top_slide.animate({opacity:0},500)
+
               i++
-              console.log(i)
+              var top_reload = function(){
+                window.location.reload()
+              }
               if (i == top_slide.length){
-                setTimeout(window.location.reload(),10000)
+                top_slide.animate({opacity:0},1000)
+                setTimeout(top_reload,3000)
               }else{
                 slide()
               }
