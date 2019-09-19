@@ -1,14 +1,20 @@
 <nav class="header">
   <ul>
-    <li>JUN OKUNO Architects</li>
-    <%=link_to "new" ,new_product_path %>
-    <%=link_to "about" ,"" %>
-    <%=link_to "flow"  ,"" %>
-    <%=link_to "contact" ,user_messages_path(1)%>
-    <%if user_signed_in?%>
-    <%= link_to 'logout', destroy_user_session_path , method:'delete'%>
-    <%else%>
-    <%=link_to "login" ,user_session_path%>
-    <%end%>
-  </ul>
+    <li class='name'>JUN OKUNO Architects</li>
+    <li>about</li>
+    <li>flow</li>
+    <li class='contact'>
+      contact
+      <ul class='pop'>
+        <% if user_signed_in?%>
+          <li><%=link_to 'sign-up',new_user_registration_path %></li>
+          <li><%=link_to 'log-out',destroy_user_session_path,method:'delete' %></li>
+        <%else%>
+          <li><%=link_to 'log-in',user_session_path %></li>
+        <%end%>
+      </ul>
+    </li>
 </nav>
+
+
+

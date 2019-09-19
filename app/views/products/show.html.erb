@@ -15,14 +15,14 @@
         <i class="far fa-caret-square-left"></i>
         <i class="far fa-caret-square-right"></i>
           <% @works.each do |work|%>
-            <%=image_tag work.image.url ,class:"show__slide-left-frame-image"%>
+            <%=image_tag work.image.url ,class:"show__slide-left-frame-image image-style"%>
            <%end%>
         </div>
        </div>
         <div class="show__slide-right">
           <div class="show__slide-right-frame">
             <% @works.each do |work|%>
-              <%=image_tag work.image.url ,class:"show__slide-right-frame-image"%>
+              <%=image_tag work.image.url ,class:"show__slide-right-frame-image image-style"%>
            <%end%>
 
           </div>
@@ -32,12 +32,11 @@
         <div class="slide_bar-prev"></div>
         <div class="slide_bar-wrapper">
       <% @works.each do |work|%>
-          <%=image_tag work.image.url ,class:"slide_bar-image"%>
+          <%=image_tag work.image.url ,class:"slide_bar-image image-style"%>
       <%end%>
         </div>
         <div class="slide_bar-next">
     </div>
-
   </div>
 </div>
 

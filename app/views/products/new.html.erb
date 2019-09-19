@@ -1,38 +1,4 @@
 <div class="new_product">
 新規登録
-<%= form_with model:@product do |f|%> 
-  <div class="form">
-  <%=f.label :name ,"name",class:"label"%>
-  <%= f.text_field :name ,class:"input"%>
-  <%=f.label :text ,"text",class:"label"%>
-  <%= f.text_area :text,class:"input"%>
-  <%=f.label :image ,"image",class:"label"%>
-  <%= f.file_field :image ,class:"field"%>
-
-  <%=f.label :date ,"竣工年月日",class:"label"%>
-  <%= f.date_select :date,{use_two_digit_numbers:true},class:"input"%>
-
-  <%=f.label :place ,"所在地",class:"label"%>
-  <%= f.text_field :place,class:"input"%>
-
-  <%=f.label :purpose ,"主要用途",class:"label"%>
-  <%= f.text_field :purpose,class:"input"%>
-
-  <%=f.label :scale ,"構造規模",class:"label"%>
-  <%= f.text_field :scale,class:"input"%>
-
-  <%=f.label :site_area ,"敷地面積",class:"label"%>
-  <%= f.text_field :site_area,class:"input"%>
-
-  <%=f.label :building_area ,"建築面積",class:"label"%>
-  <%= f.text_field :building_area,class:"input"%>
-
-  <%=f.label :architectural_area ,"延べ床面積",class:"label"%>
-  <%= f.text_field :architectural_area,class:"input"%>
-
-
-
-  <%= f.submit "send" ,class:"buttom"%>
-  </div>
-<%end%>
+<%= render 'product-form'%>
 </div>

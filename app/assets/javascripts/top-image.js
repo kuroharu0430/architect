@@ -45,7 +45,6 @@ $(function(){
               // })
             })
             var fadeOut = function(){
-              console.log(i)
               top_heading.eq(i).hide('slide',{direction:'left'},100)
               $('.heading-name').eq(i).hide('slide',{direction:'left'},100)
               $('.heading-title').eq(i).hide('slide',{direction:'top'},100)

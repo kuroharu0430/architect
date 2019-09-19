@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
 
   def show
     @works =@product.works.all
-    
+    @product = Product.find(params[:id])
   end
 
   def new
@@ -15,20 +15,23 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-    @product.save
+    if @product.save
+      redirect_to action: :new
+    end
   end
 
   def edit
   end
 
   def update
-    @product = Product.update(product_params)
-    redirect_to root_path
+    if @product.update(product_params)
+      redirect_to action: :edit
+    end
   end
 
   private
   def product_params
-    params.require(:product).permit(:name, :title ,:text, :image)
+    params.require(:product).permit(:name,:text,:image,:date,:place,:purpose,:scale,:site_area,:building_area,:architectural_area)
   end
 
   def set_product

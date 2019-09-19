@@ -1,12 +1,12 @@
 $(function(){
-  
-//   var scroll_top =$(window).scrollTop();
-//   console.log($(window).scrollTop())
-//   console.log($(window).height())
-//   console.log($('h1').offset().top)
-//   var height=$(window).scrollTop()+$(window).height()+100;
-//   console.log(height)
-//   // if ( height > $('h1').offset().top()){
-//   //   $('h1').fadeIn();
-//   // }
+  $(window).on('scroll', function(){
+    var height=$(window).scrollTop()+$(window).height();
+
+    $('.float').each(function(){
+      if ( height > $(this).offset().top){
+        $(this).animate({opacity:0},2000);
+      }
+    })
+  })
 });
+

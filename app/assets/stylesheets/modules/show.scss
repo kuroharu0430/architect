@@ -1,3 +1,8 @@
+.show{
+  // display:none;
+}
+
+
 .choose{
   width:100%;
   height:100%;
@@ -17,11 +22,12 @@
 .container{
   background-color:rgba(white,1);
   position:relative;
-  padding-top:100px;
+  padding-top:130px;
   filter:greyscale(100%);
   width:800px;
   margin:0 auto;
   height:100vh;
+  overflow:hidden;
   margin-top:0px;
 }
 .show{
@@ -86,13 +92,8 @@
         // box-shadow:5px 5px 3px rgba(black,0.5);
         display:flex;
         &-image{
-          filter: grayscale(100%);
+          filter: grayscale(50%);
           display:none;
-          // opacity:0;
-          min-height: 100%;
-          width: 100%;
-          position:absolute;
-
         }
       }
 
@@ -110,9 +111,7 @@
         height:100%;
         position:relative;
         &-image{
-          display:none;
-          object-fit:cover;
-          position:absolute;
+          // display:none;
         }
       }
       }
@@ -167,12 +166,13 @@
     display:flex;
   }
   &-image{
+    position:relative;
     filter: grayscale(10%);
 
     padding:5px;
     width:100px;
     height:100px;
     object-fit:cover;
-
+    margin:auto;
   }
 }

@@ -1,18 +1,4 @@
 <div class="new_product">
 登録変更
-<%= form_with model:@product do |f|%> 
-  <div class="form">
-  <%=f.label :name ,"name",class:"label"%>
-  <%= f.text_field :name ,class:"input"%>
-  <%=f.label :title ,"title",class:"label"%>
-  <%= f.text_field :title,class:"input"%>
-  <%=f.label :text ,"text",class:"label"%>
-  <%= f.text_field :text,class:"input"%>
-  
-  <%=f.label :image ,"image",class:"label"%>
-  <%= f.file_field :image ,class:"field"%>
-
-  <%= f.submit "send" ,class:"buttom"%>
-  </div>
-<%end%>
+<%= render 'product-form'%>
 </div>
