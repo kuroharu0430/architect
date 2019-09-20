@@ -14,6 +14,7 @@ $(function(){
     $('.top__screen').fadeOut(function(){
       $('.hand-writing').animate({'marginTop':"0"},700,'swing',function(){
         $('.hand-writing').addClass('expansion');
+        $('.reflection').fadeIn(1)
       })
     })
 
@@ -52,7 +53,7 @@ $(function(){
 
               i++
               var top_reload = function(){
-                window.location.reload()
+                imageReload()
               }
               if (i == top_slide.length){
                 top_slide.animate({opacity:0},1000)

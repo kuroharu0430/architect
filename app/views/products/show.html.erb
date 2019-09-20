@@ -29,14 +29,17 @@
       </div>
     </div>
     <div class="slide_bar">
-        <div class="slide_bar-prev"></div>
+        <div class="slide_bar-prev">
+          <i class="fas fa-caret-left"></i>
+        </div>
         <div class="slide_bar-wrapper">
       <% @works.each do |work|%>
           <%=image_tag work.image.url ,class:"slide_bar-image image-style"%>
       <%end%>
         </div>
         <div class="slide_bar-next">
-    </div>
+          <i class="fas fa-caret-right"></i>
+        </div>
   </div>
 </div>
 

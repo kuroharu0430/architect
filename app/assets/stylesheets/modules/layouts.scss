@@ -21,6 +21,8 @@ li{
 }
 
 nav{
+  text-shadow: 3px 3px 2px white;
+
   background-color:rgba(white,0.2);
   width:100%;
   height:40px;
@@ -38,8 +40,6 @@ nav{
       list-style: none;
       margin-left:20px;
       font-size:35px;
-      text-shadow: 3px 3px 2px white;
-      background-color:transparent;
     }
   }
   a{
@@ -58,24 +58,27 @@ nav{
     margin-right:auto;
   }
 }
-.contact{
-  font-size:20px;
+.header{
+  font-size:30px;
   height:100px;
-}
-
-.pop{
-  z-index:20;
-  background-color:rgba(white,0.8);
-  display:flex;
-  flex-direction: column;
-  li{
-    display:none;
-
-    font-size:1em;
-    line-height:2em;
-    height:2em;
-    color:grey;
-    border-bottom:1px solid white;
+  margin-left:20px;
+  &__list{
+    margin:0 20px 0 0;
   }
 }
+// .pop{
+//   z-index:20;
+//   background-color:rgba(white,0.8);
+//   display:flex;
+//   flex-direction: column;
+//   li{
+//     display:none;
+
+//     font-size:1em;
+//     line-height:2em;
+//     height:2em;
+//     color:grey;
+//     border-bottom:1px solid white;
+//   }
+// }
 

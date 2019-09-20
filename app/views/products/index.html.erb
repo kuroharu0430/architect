@@ -11,18 +11,20 @@
     </div>
   </div>
   <div class="top__image">
+  <div class='reflection'></div>
+
       <%=image_tag '/colored.jpg', class:'hand-writing'%>
   </div> 
 
   <div class="top__slide">
-    <div class="top__slide-frame">
+    <div class="top__slide-frame ">
       <% @products.each do |product| %>
         <div class="top__slide-frame-heading">
         </div>
         <div class="heading-name"><%=product.name %></div>
         <div class="heading-title"><%=product.text%></div>
 
-        <%=image_tag product.image.url, class:"top__slide-frame-image"%>
+        <%=image_tag product.image.url, class:"top__slide-frame-image image-style"%>
       <%end%>
     </div>
   </div>

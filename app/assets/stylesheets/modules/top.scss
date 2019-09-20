@@ -6,6 +6,7 @@
   position:absolute;
 }
 
+
 .top{
   padding-bottom:10px;
   position:relative;
@@ -74,6 +75,29 @@
     }
   }
 
+  .reflection{
+    display:none;
+    z-index:20;
+    position:abusolute;
+    height      :100%;
+      width       :30px;
+      position    :absolute;
+      top         :-180px;
+      left        :0;
+      background-color: #fff;
+      opacity     :0;
+      transform: rotate(45deg);
+      animation: reflection 3s ease-in-out ;
+      animation-delay:0.55s;
+  }
+  
+  @keyframes reflection {
+    0% { transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { transform: scale(50) rotate(45deg); opacity: 0; }
+  }
+  
   &__slide{
     margin:0;
     z-index:0;

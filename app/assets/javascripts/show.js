@@ -47,3 +47,12 @@ $(function(){
     };
   setInterval(show_reload, 4000)
 });
+
+// 下段スクロール
+$(function(){
+  $('.fa-caret-left').click(function(){
+    
+  })
+
+
+});
