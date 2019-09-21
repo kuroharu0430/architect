@@ -1,4 +1,6 @@
 $(function(){
+  
+  
   // $('.show').show('fade',2000)
   var slide_left = $('.show__slide-left-frame-image');
   slide_left.eq(0).show('drop');
@@ -49,9 +51,15 @@ $(function(){
 });
 
 // 下段スクロール
+
 $(function(){
+  console.log('good');
   $('.fa-caret-left').click(function(){
-    
+    $('.slide_bar-wrapper').animate({scrollLeft:'100px'},500)
+  })
+  $('.fa-caret-right').click(function(){
+    console.log('dsa')
+    $('.slide_bar-wrapper').animate({scrollLeft:'-100px'},500)
   })
 
 

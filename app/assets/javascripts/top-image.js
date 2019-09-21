@@ -1,14 +1,19 @@
 $(function(){
+    console.log(window.location.href)
 
-    var typeWritter = $('.top__screen-title h1').html().split("");
-    $('.top__screen-title h1').html("")
 
-    $.each(typeWritter,function(index,val){
-      letter = $("<span/>").text(val).css({opacity:0});
-       $('.top__screen-title').append(letter)
-      letter.delay(index*100);
-      letter.animate({opacity:1},1000);
-    })
+    if (window.location.href.match(/\//)){
+      var typeWritter = $('.top__screen-title h1').html().split("");
+      $('.top__screen-title h1').html("")
+        $.each(typeWritter,function(index,val){
+        letter = $("<span/>").text(val).css({opacity:0});
+         $('.top__screen-title').append(letter)
+        letter.delay(index*100);
+        letter.animate({opacity:1},1000);
+      })
+    }
+
+  
     
   var imageReload = function(){
     $('.top__screen').fadeOut(function(){
