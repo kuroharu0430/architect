@@ -6,9 +6,11 @@
   <ul class="header">
     <li class="header__list">about</li>
     <li class="header__list">flow</li>
-    <li class="header__list">contact</li>
+    <%= link_to user_session_path do%>
+      <li class="header__list">contact</li>
+    <%end%>
     <%= link_to new_product_path do%>
-    <li class='header__list'>new</li>
+      <li class='header__list'>new</li>
     <% end %>
   </ul>    
       <%# <ul class='pop'> %>

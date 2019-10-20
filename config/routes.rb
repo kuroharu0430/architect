@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  get 'homes/index'
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   devise_for :users
   root to: "products#index"
     resources :products do
-    resources :works 
-  end
+      resources :works 
+    end
 
   resources :users do
     resources :messages
