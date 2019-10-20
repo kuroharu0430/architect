@@ -1,6 +1,4 @@
-$(function(){
-  
-  
+$(function(){  
   // $('.show').show('fade',2000)
   var slide_left = $('.show__slide-left-frame-image');
   slide_left.eq(0).show('drop');
