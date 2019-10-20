@@ -1,0 +1,22 @@
+.business{
+  background-image:url("/1909028手書き最新.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  // background-position-y:-400px;
+}
+
+.circles{
+  display:flex;
+  flex-wrap:wrap;
+}
+.circle{
+  box-sizing: border-box;
+  opacity:0.7;
+  width:20%;
+  padding:50px;
+  margin:50px;
+  height:200px;
+  background:aqua;
+  border-radius:50%; 
+  filter: drop-shadow(5px 5px 10px #666);
+}

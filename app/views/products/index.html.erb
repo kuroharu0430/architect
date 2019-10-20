@@ -1,46 +1,100 @@
-<%= render 'layouts/nav'%>
-<div class="product">
-
-</div>
-
-<div class="top">
-  <div class="top__screen">
-    <div class="top__screen-title">
-      <h1>子どもの心に残る<br>
-          空間づくりを</h1>
+<div class="products">
+  <%= render 'layouts/nav'%>
+  <section class='top'>
+    <div class="top__left">
+      <div class="top__left-message">
+        <%# THANK<br>
+        YOU<br>
+          FOR<br>
+          WATCHING %>
+      </div>
     </div>
-  </div>
-  <div class="top__image">
-  <div class='reflection'></div>
+    <div class="top__card">
+       <div class="top__card-letter">
+        子どもの<span>心に残る</span>空間作りを約束します
+       </div>
 
-      <%=image_tag '/colored.jpg', class:'hand-writing'%>
-  </div> 
-
-  <div class="top__slide">
-    <div class="top__slide-frame ">
-      <% @products.each do |product| %>
-        <div class="top__slide-frame-heading">
+      <div class="top__card-message">
+        <div class="card_message">
+        光の匂い、<br>
+        音の便り、<br>
+        風の声、<br>
+        全て、<br>
+        priceless
         </div>
-        <div class="heading-name"><%=product.name %></div>
-        <div class="heading-title"><%=product.text%></div>
+      </div>
+      <div class="top__card-image">
+            <div class='reflection'></div>
 
-        <%=image_tag product.image.url, class:"top__slide-frame-image image-style"%>
-      <%end%>
+        <%=image_tag "/空消しpng.png" ,class:"hand_writing_first"%>
+        <div class='mask'>
+          <%=image_tag "/空消しpng.png" ,class:"hand_writing_second"%>
+        </div>
+      </div>
+  </div>
+
+
+  </section>
+    <h3 class="works__heading">
+    </h3>
+  <section class="works">
+    <div class="works__left">
+      <div class="works__slide">
+          <div class="works__slide-message">
+              <div class="title">奈良県天理市</div>
+          </div>
+          <% @products.each do |product|%>
+            <%= image_tag product.image.url,class:"works__slide-image"%>
+          <%end%>
+      </div>
+
+        <ul class="works__left-bar">
+          <% @products.each do |product|%>
+            <%= link_to product_path(product),remote:true do%>
+              <li>
+                <div class="masking">飛鳥村</div>
+                <%= image_tag product.image.url ,class:"works__left-bar-image"%>
+              </li>
+            <% end %>
+          <%end%>
+        </ul>
     </div>
-  </div>
 
+    <div class="works__box">
+        <div class="works__box-dummy"></div>
+
+      <h2>works</h2>
+      <p class="works-text">
+        多分これは縄文時代に作った遺跡をリフォームして、現代風に変えた建築物。入り口がたて穴なのが興味をそそります。あと屋根には登れません。
+      </p>
+    </div>
+  </section>
+  <h3></h3>
+
+  <section class="about">
+    <div class= "container">
+      <div class="about__left">
+        <h2 class="about__left-heading">
+        profile
+        </h2>
+        <div class="profile">
+          <div class="profile__frame">
+            <%= image_tag "/images/IMG_0139.jpg" ,class:"profile__frame-image"%>
+          </div>
+          <div class="profile-text">
+            大阪府在住<br>
+            フットサルたまにしてます<br>
+            一級建築士<br>
+            座右の銘<br>
+            急がば回れ
+          </div>
+        </div>
+      </div>
+      <div class="about__right">
+      </div>
+    </div>
+  </section>
+  <section class="contact">
+  <div class="login-btn">contact<div>
+  </section>
 </div>
-
-<div class="works">
-  <div class="cards">
-  <%= render @products %>    
-  </div>
-</div>
-
-
-<h3 class="section float">about</h3>
-<h3 class="section float">flow</h3>
-
-
-
-

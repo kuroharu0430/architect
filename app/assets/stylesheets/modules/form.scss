@@ -1,18 +1,77 @@
+@mixin input-box{
+  border:2px solid lightgrey;
+  width:100%;
+  height:48px;
+  padding:10px 16px 8px ;
+  margin-top:10px;
+  border-radius:5px;
+  font-size:16px;
+  box-sizing:border-box;
+}
+
 .new_product{
   font-size:30px;
 }
 
 .form{
-  display:flex;
-  flex-direction:column;
   padding:30px;
   font-size:30px;
+  &__container{
+    background:#fafafa;
+    padding:0 10vw;
+    margin:0 auto;
+    width:70vw;
+    display:flex;
+    flex-direction:column;
+  }
+  &__content{
+    display:flex;
+    align-items: center;
+    width:100%;
+    margin-top:30px;
+    .label{
+      font-size:1em;
+      width:25%;
+
+    }
+    .input{
+      @include input-box;
+      width:75%;
+      float:right;
+    }
+    .date{
+      width:25%;
+    }
+  }
 }
 
-.input{
-  border:5px solid grey;
-  font-size:30px;
+.main__image{
+  margin:30px auto;
+  display:flex;
+  flex-direction:column;
+  p{
+    line-height:1em;
+    margin:10px 0;
+  }
+  &-select{
+    border:2px grey solid;
+    position:relative;
+    height:200px;
+    width:300px;
+    background:white;
+  
+    &-label{
+      // position:absolute;
+      // height:100%;
+      // width:100%;
+      // background:white;
+    
+    }
+  }
+  
+
 }
+
 
 .buttom{
   width:100px;
@@ -21,14 +80,60 @@
   margin:20px auto;
   font-size:30px;
 }
-.field{
-  font-size:20px;
+
+.works_heading{
+  line-height:1em;
+  margin:10px 0;
   text-align:center;
 }
+.works_file_field{
+  display:none;
+}
+.output{
+  width:100%;
+  height:100%;
+}
+.image_remove{
+  height:20%;
+  width:100%;
+}
 
-.form-image{
-  width:200px;
-  height:100px;
-  
-  clear:both;
+.image-wrapper{
+  height:100%;
+}
+
+.works__image{
+  display:flex;
+  width:100%;
+  height:200px;
+  background:#ccc;
+}
+.works{
+  &_output{
+    width:150px;
+    height:80%;
+  }
+  &_output_area{
+    display:flex;
+  }
+  &_input_area{
+    height:100%;
+    width:100%;
+    position:relative;
+    .works_input{
+      position:absolute;
+      width:100%;
+      height:100%;
+    }
+  }
+  &_file_field{
+    width:100%;
+  }
+
+}
+.image_remove{
+  height:20%;
+  font-size:0.5em;
+  text-align:center;
+  background:#eee;
 }

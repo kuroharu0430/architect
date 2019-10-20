@@ -1,186 +1,71 @@
-
-.choose{
-  width:100%;
-  height:100%;
-  background:black;
-  opacity:0.5;
-}
-
-.dummy{
-  width:100%;height:calc(100% + 200px);
-  opacity:0.3;
-  position:absolute;
-  top:-100px;
-  background-image:url('/colored.jpg');
-  background-size:cover;
-}
-
-.container{
-  background-color:rgba(white,1);
-  position:relative;
-  padding-top:130px;
-  filter:greyscale(100%);
-  width:800px;
-  margin:0 auto;
-  height:100vh;
-  overflow:hidden;
-  margin-top:0px;
-}
 .show{
-  width:100vw;
-  height:100vh;
-  background:grey;
-  &-name{
-    // background-color:white;
-    color:grey;
-    // border-left:5px solid grey;
-    font-size:30px;
-    margin-top:0px;
-    // text-shadow:5px 5px 5px grey;
-    // text-decoration: underline;
-  }
-  &-title{
-    font-size:20px;
-    color:grey;
-    
-  }
+  width:900px;
+  height:500px;
+  margin:0 auto;
+  background:white;
+ 
   &__slide{
+    z-index:1;
+    padding:5%;
+    // margin-left:5%;
     position:relative;
-    margin:0 auto;
-    background-color:rgba(grey,0.05);
-    width:600px;
-    height:400px;
-    // box-shadow:2px 2px 1px rgba(black,0.2);
-    &-title{
-      position:absolute;
-      top:-60px;left:-60px;
-      // background-color:rgba(black ,0.1);
-      width:300px;
-      height:120px;
-    }    
+    overflow:hidden;
+    width:70%;
+    height:75%;
+    background:white;
     &-data{
-      position:absolute;
-      bottom:-60px;right:-60px;
-      width:150px;
-      height:240px;
-      background:rgba(white, 0.5);
-      padding:10px;
-      color:grey;
-      word-break : break-all;
-      // box-shadow:0px 0px 5px rgba(black,0.5);
-      line-height:20px;
-      
-
-    }
-
-    &-right{
-      position:absolute;
-      // overflow:hidden;
-      
-      top:-60px;right:-60px;
-      width:350px;
-      height:250px;
-      &-frame{
-        overflow:hidden;
-        width:100%;
-        height:100%;
-        position:relative;
-        // box-shadow:5px 5px 3px rgba(black,0.5);
-        display:flex;
-        &-image{
-          filter: grayscale(50%);
-          display:none;
-        }
-      }
-
-    }
-    &-left{
+      background:rgba(white,0.5);
+      color:black;
       z-index:10;
       position:absolute;
-      bottom:-60px;left:-60px;
-      width:540px;
-      height:360px;
-      box-shadow:8px 8px 5px rgba(black,0.5);
-      &-frame{
-        overflow:hidden;
-        width:100%;
-        height:100%;
-        position:relative;
-        &-image{
-          // display:none;
-        }
+      line-height:2em;
+    }
+    .left{
+      margin-top:2%;
+    }
+    .right{
+      bottom:0;right:0;
+      margin-bottom:2%;
+    }
+    &__wrapper{
+      position:absolute;
+      overflow:hidden;
+      width:84%;
+      height:100%;
+    transform:skew(-15deg);
+    transform-origin: bottom left;
+    &-image{
+      // transform:skew(15deg);
+      // height:100%;
+      // object-fit:cover;
+      margin-left:-15%;
+
       }
-      }
-  }
-}
-
-.fa-caret-square-left{
-  position:absolute;
-  top:45%;left:10px;
-  z-index:1;
-  color:white;
-  font-size:3em;
-  opacity:0.3;
-}
-
-.fa-caret-square-right{
-  position:absolute;
-  top:45%;right:10px;
-  z-index:1;
-  color:white;
-  font-size:3em;
-  opacity:0.3;
-}
-
-.box{
-  width:70%;
-  height:200px;
-  background:#eee;
-  margin:40px auto;
-  opacity:0.5;
-}
-
-.slide_bar{
-  margin-left:40px;
-  margin-top:80px;
-  width:720px;
-  height:100px;
-  display:flex;
-  background:rgba(grey ,0.3);
-  &-prev{
-    width:60px;
-    border-right:1px solid black;
-  }
-  &-next{
-    width:60px;
-    border-left:1px solid grey;
-
-  }
-  &-wrapper{
-    overflow-x:scroll;
-    width:600px;
-    display:flex;
-  }
-  &-image{
-    position:relative;
-    filter: grayscale(10%);
-
-    padding:5px;
-    width:100px;
-    height:100px;
-    object-fit:cover;
-    margin:auto;
-  }
-  .fas{
-    display:block;
-    margin:auto;
-    text-align:center;
-    font-size:70px;
-    color:green;
-    filter:brightness(150%);
-    line-height:100px;
     
+    }
+    // &-decoration{
+    //   position:absolute;
+    //   height:50%;
+    //   width:50%;
+    //   background:black;
+    //   background-image:url(/FE6781-TH8791_20170202R01.jpg);
+    // }
+    // .left_bottom{
+    //   bottom:0;left:0;
+    // }
+    // .right_top{
+    //   top:0;right:0;
+    // }
+  
   }
-  
-  
+  &__bar{
+    display:flex;
+    &-image{
+      width:100px;
+      height:100px;
+      object-fit:cover;
+
+    }
+
+  }
 }

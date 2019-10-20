@@ -5,12 +5,13 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @works =@product.works.all
     @product = Product.find(params[:id])
+    
   end
 
   def new
     @product = Product.new
+    @product.works.build
   end
 
   def create
@@ -21,6 +22,8 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    @product.works.build
+    @product = Product.update(product_params)
   end
 
   def update
@@ -31,7 +34,7 @@ class ProductsController < ApplicationController
 
   private
   def product_params
-    params.require(:product).permit(:name,:text,:image,:date,:place,:purpose,:scale,:site_area,:building_area,:architectural_area)
+    params.require(:product).permit(:name,:text,:image,:date,:place,:purpose,:scale,:site_area,:building_area,:architectural_area, works_attributes: [:_destroy,:id,:image])
   end
 
   def set_product

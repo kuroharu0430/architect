@@ -1,0 +1,39 @@
+
+.about{
+  width:100vw;
+  height:100vh;
+  background-image:url("/1909028手書き最新.jpg");
+  background-size:cover;
+  &__left{
+    width:400px;
+    height:400px;
+    background:white;
+    border:2px solid grey;
+    margin-left:50px;
+    box-shadow:5px 5px 10px grey;
+    &-heading{
+      height:20%;
+      font-size:50px;
+      text-align:center;
+      border-bottom:2px solid grey;
+    }
+    .profile{
+      display:flex;
+      height:80%;
+
+        &__frame{
+          padding:20px;
+          width:50%;
+          overflow:hidden;
+        &-image{
+          }
+        }
+      &-text{
+        width:50%;
+        padding:20px;
+
+      }
+    }
+  }
+}
+
