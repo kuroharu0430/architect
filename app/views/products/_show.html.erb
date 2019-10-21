@@ -1,30 +1,29 @@
 <div class="show">
-  <div class="show__slide">
-    <ul class="show__slide-data left">
-      <li>竣工年月日：<%= @product.date%></li>
+  <div class="show__data">
+    <ul class="show__data-top">
       <li>所在地：<%= @product.place%></li>
+      <li>竣工年月日：<%= @product.date%></li>
+    </ul>
+    <ul class="show__slide-data-bottom">
       <li>主要規模：<%= @product.purpose%></li>
       <li>構造規模：<%= @product.scale%></li>
-    </ul>
-    <ul class="show__slide-data right">
       <li>敷地面積：<%= @product.site_area%>m2</li>
       <li>建築面積：<%= @product.building_area%>m2</li>
       <li>延べ床面積：<%= @product.architectural_area%>m2</li>
     </ul>
-    <%# <div class="show__slide-decoration left_bottom"></div>
-    <div class="show__slide-decoration right_top"></div> %>
-
-
-    <%# <div class="show__slide__wrapper"> %>
-      <%= image_tag @product.image.url, class:"show__slide__wrapper-image"%>
-    <%# </div> %>
   </div>
-
-  <ul class="show__bar">
-    <%@product.works.each do |work|%>
-      <li><%= image_tag work.image.url, class:"show__bar-image" %></li>
-    <% end %>
-  </ul>
+    <div class="show__slide">
+      <div class="show__slide-wrapper">
+        <%@product.works.each do |work|%>
+          <%= image_tag work.image.url ,class:'image'%>
+        <% end %>
+      </div>
+      <ul class="show__slide__bar">
+        <%@product.works.each do |work|%>
+          <li><%= image_tag work.image.url, class:"show__bar-image" %></li>
+        <% end %>
+      </ul>
+    </div>
 </div> 
 
 
