@@ -1,26 +1,20 @@
-<div class="nav">
-  <div class="nav__name">
-    <h1>オクノジュン建築設計事務所</h1>
-    <p>JUN OKUNO Architects</p>
-  </div>
+<nav>
   <ul class="header">
-    <li class="header__list">about</li>
-    <li class="header__list">flow</li>
-    <li class="header__list">contact</li>
-    <%= link_to new_product_path do%>
-    <li class='header__list'>new</li>
-    <% end %>
-  </ul>    
-      <%# <ul class='pop'> %>
-        <%# <% if user_signed_in?%> 
-          <%# <li><%=link_to 'sign-up',new_user_registration_path %></li> 
-          <%# <li><%=link_to 'log-out',destroy_user_session_path,method:'delete' %></li> 
-        <%# <%else%> 
-          <%# <li><%=link_to 'log-in',user_session_path %></li> 
-        <%# <%end%> 
-      <%# </ul> %>
-    <%# </li> %>
-</div>
+    <li class='header__list name'>JUN OKUNO Architects</li>
+    <li class="header__list about">about</li>
+    <li class="header__list flow">flow</li>
+    <li class='header__list contact'>
+      contact
+      <ul class='pop'>
+        <% if user_signed_in?%>
+          <li><%=link_to 'sign-up',new_user_registration_path %></li>
+          <li><%=link_to 'log-out',destroy_user_session_path,method:'delete' %></li>
+        <%else%>
+          <li><%=link_to 'log-in',user_session_path %></li>
+        <%end%>
+      </ul>
+    </li>
+</nav>
 
 
 

@@ -51,6 +51,7 @@ $(function(){
 // 下段スクロール
 
 $(function(){
+  console.log('good');
   $('.fa-caret-left').click(function(){
     $('.slide_bar-wrapper').animate({scrollLeft:'100px'},500)
   })

@@ -14,16 +14,10 @@
  *= require_self
  */
 
-@import "reset";
-@import "./mixin/mixin";
+ @import "./mixin/mixin";
 @import "./modules/top";
 @import "./modules/layouts";
 @import "./modules/products";
 @import "./modules/show";
 @import "./modules/form";
 @import "./modules/messages";
-@import "./modules/business";
-@import "./modules/home";
-@import "./modules/works";
-@import "./modules/about";
-

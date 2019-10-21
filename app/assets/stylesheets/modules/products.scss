@@ -1,19 +1,18 @@
-
-.works{
-  margin:auto;
-  margin-top:30px;
+h2{
+  margin-bottom:0;
 }
+
 .cards{
-  width:calc(100% - 40px);
-  margin:0px auto;
+  margin-top:20px;
   display:flex;
   justify-content:space-around;
-  padding:0;
+  padding-top:0;
   box-shadow:5px 5px 5px rgba(black,0.5);
 }
 .card{
-  width:100%;
+  width:25vw;
   height:20vh;
+  margin-top:20px;
   overflow:hidden;
   &-image{
     height:100%;
@@ -24,7 +23,7 @@
   }
 }
 .select{
-  transform: scale(1.15,1.15);
+  transform: scale(1.2,1.2);
   transition-duration: 0.5s;
   box-shadow:5px 5px 5px rgba(black,0.5);
   filter:brightness(120%);

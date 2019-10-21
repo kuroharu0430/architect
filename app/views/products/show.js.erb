@@ -1,8 +1,0 @@
-$(function(){
-$('.works__slide').html('<%= j(render partial: 'show') %>')
-$('.works-text').text("<%= @product.name%>")
-$('.works_heading').text("<%= @product.place%>")
-$('.show').css("display","none")
-$('.show').fadeIn(1000)
-
-})

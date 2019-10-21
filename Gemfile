@@ -67,4 +67,3 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem "font-awesome-rails"
 gem 'devise'
-gem 'activeadmin'

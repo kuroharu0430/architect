@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get 'homes/index'
+=======
+>>>>>>> parent of 644597e... renew
   devise_for :users
   root to: "products#index"
     resources :products do
