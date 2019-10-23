@@ -9,12 +9,13 @@
           WATCHING %>
       </div>
     </div>
+
     <div class="top__card">
        <div class="top__card-letter">
         子どもの<span>心に残る</span>空間作りを約束します
        </div>
 
-      <div class="top__card-message">
+      <%# <div class="top__card-message">
         <div class="card_message">
         光の匂い、<br>
         音の便り、<br>
@@ -22,15 +23,16 @@
         全て、<br>
         priceless
         </div>
-      </div>
+      </div> %>
       <div class="top__card-image">
             <div class='reflection'></div>
 
-        <%=image_tag "/空消しpng.png" ,class:"hand_writing_first"%>
+        <%=image_tag "/スケッチ.png" ,class:"hand_writing_first"%>
         <div class='mask'>
-          <%=image_tag "/空消しpng.png" ,class:"hand_writing_second"%>
+          <%=image_tag "/スケッチ.png" ,class:"hand_writing_second"%>
         </div>
       </div>
+    </div>
   </div>
 
 
@@ -40,11 +42,12 @@
   <section class="works">
     <div class="works__left">
       <div class="works__slide">
+      <div class="works__slide-message"> </div>
+
+      <div class="title"></div>
         <% @products.each do |product|%>
-          <div class="works__slide-message">
-              <div class="title"><%= product.name%></div>
-          </div>
           <%= image_tag product.image.url,class:"works__slide-image"%>
+          <%# <%= product.name%>
         <%end%>
       </div>
 
@@ -52,7 +55,7 @@
           <% @products.each do |product|%>
             <%= link_to product_path(product),remote:true do%>
               <li>
-                <div class="masking">飛鳥村</div>
+                <div class="masking"><%= product.name%></div>
                 <%= image_tag product.image.url ,class:"works__left-bar-image"%>
               </li>
             <% end %>
@@ -63,7 +66,7 @@
     <div class="works__box">
         <div class="works__box-dummy"></div>
 
-      <h2>works</h2>
+      <h2 class="works__box-name">works</h2>
       <p class="works-text">
         多分これは縄文時代に作った遺跡をリフォームして、現代風に変えた建築物。入り口がたて穴なのが興味をそそります。あと屋根には登れません。
       </p>
@@ -72,28 +75,9 @@
   <h3></h3>
 
   <section class="about">
-    <div class= "container">
-      <div class="about__left">
-        <h2 class="about__left-heading">
-        profile
-        </h2>
-        <div class="profile">
-          <div class="profile__frame">
-            <%= image_tag "/images/IMG_0139.jpg" ,class:"profile__frame-image"%>
-          </div>
-          <div class="profile-text">
-            大阪府在住<br>
-            フットサルたまにしてます<br>
-            一級建築士<br>
-            座右の銘<br>
-            急がば回れ
-          </div>
-        </div>
-      </div>
-      <div class="about__right">
-      </div>
-    </div>
+    <%= image_tag "/プロフィール1.png"%>
   </section>
+  
   <section class="contact">
   <div class="login-btn">contact<div>
   </section>

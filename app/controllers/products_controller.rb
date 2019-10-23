@@ -23,7 +23,6 @@ class ProductsController < ApplicationController
 
   def edit
     @product.works.build
-    @product = Product.update(product_params)
   end
 
   def update

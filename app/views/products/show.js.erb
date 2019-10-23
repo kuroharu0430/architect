@@ -1,10 +1,15 @@
 $(function(){
 $('.works__slide').html('<%= j(render partial: 'show') %>')
-$('.works-text').text("<%= @product.name%>")
-$('.works_heading').text("<%= @product.place%>")
+$('.works-text').text("<%= @product.text%>")
+$('.works_heading').text("<%= @product.text%>")
 $('.show').css("display","none")
 $('.show').fadeIn(1000)
 
+var works_height = $('.works').offset().top - $('.nav').height()
+console.log(works_height)
+$('html ,body').animate({scrollTop:works_height})
+$('.show_image').css("display","none")
+$('.show_image').eq(0).fadeIn()
 
 
 })

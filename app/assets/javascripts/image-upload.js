@@ -10,7 +10,6 @@ $(function(){
     fileReader.readAsDataURL(file);
 })
 
-
 $(".works__image").on("change",'.works_file_field',function(){
   var file = $(this).prop('files')[0];
   var fileReader = new FileReader();

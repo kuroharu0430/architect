@@ -1,78 +1,12 @@
 $(function(){
   
-  // $('.show').show('fade',2000)
-  $(document).on("onload",function(){
-    $('.image').css("display","none")
-    // $('.image').eq(0).fadeIn(3000)
-
-
-  })
-
-  
   $(document).on("click",".show__bar-image",function(){
-    $('.image').css("display","none")
-    $('.image').eq(1).fadeIn(1000)
+    var show_index = $(this).attr("data-index")
+    console.log(show_index)
+    $('.show_image').fadeOut()
+    $(`.show_image[data-index = ${show_index}]`).fadeIn(1000)
+    $('.show__bar-image').css("opacity","1")
+    $(`.show__bar-image[data-index = ${show_index}]`).css("opacity","0.5")
   })
-
-    var slide_left = $('.image');
-    (slide_left).eq(0).show('drop');
-  
-  // var j=0
-  // $('.show__slide__bar').click(function(){
-  //   j = $(this).index()
-  //   slide_show()
-
-  // })
-
-  // $('.fa-caret-square-left').click(function(){
-  //   j--
-  //   j=j%slide_left.length
-  //   slide_show()
-  // })
-  
-  // $('.fa-caret-square-right').click(function(){
-  //   j++
-  //   j=j%slide_left.length
-  //   slide_show()
-  // })
-  
-//   var slide_show =function(){
-//     slide_left.css('display','none')
-//     slide_left.hide('drop',{direction:"right"})
-//       slide_left.eq(j).show('drop');
-
-//     $('.slide_bar-image').removeClass('choose');
-//     $('.slide_bar-image').eq(j).addClass('choose');
-//   }
-  
-// });
-
-
-
-// $(function(){
-//   var slide_right = $('.show__slide-right-frame-image');
-//     k=1
-//     slide_right.eq(1).show('drop',{direction:"right"});
-//     var show_reload =function(){
-//       k++
-//       k=k%slide_right.length
-//       slide_right.eq(k).show('drop',{direction:"right"},1000,function(){
-//         slide_right.eq(k-1).hide('fade');
-//       });
-//     };
-//   setInterval(show_reload, 4000)
-// });
-
-// 下段スクロール
-
-// $(function(){
-//   $('.fa-caret-left').click(function(){
-//     $('.slide_bar-wrapper').animate({scrollLeft:'100px'},500)
-//   })
-//   $('.fa-caret-right').click(function(){
-//     console.log('dsa')
-//     $('.slide_bar-wrapper').animate({scrollLeft:'-100px'},500)
-//   })
-
 
 });
