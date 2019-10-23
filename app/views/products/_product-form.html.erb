@@ -21,23 +21,6 @@
           <% end %>
 
       </div>
-<<<<<<< Updated upstream
-        <p class="works_heading"> works-image </p>
-        <div class="works__image">
-          <div class="works_output_area">
-            
-          </div>
-
-          <div class="works_input_area">
-            <%=f.fields_for :works do |image|%>
-              <%=image.label :image ,class:"works_input",data:{index:"0"} do%>
-                <%= image.file_field :image ,class:"works_file_field"%>
-              <%end%>
-            <% end %>
-          </div>
-        </div>
-         <p>⬆ここをクリックして写真を添付</p>
-=======
      <p class="works_heading"> works-image </p>
 
     <div class="works__image">
@@ -63,9 +46,8 @@
           <% end %>
         </div>
     </div>
->>>>>>> Stashed changes
-
       <p>⬆ここをクリックして写真を添付</p>
+      
       <div class="form__content">
         <%=f.label :date ,"竣工年月日",class:"label"%>
         <%= f.date_select :date,{use_two_digit_numbers:true},class:"input date"%>

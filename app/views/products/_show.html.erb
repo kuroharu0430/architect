@@ -10,16 +10,12 @@
       <li>敷地面積：<%= @product.site_area%>m2</li>
       <li>建築面積：<%= @product.building_area%>m2</li>
       <li>延べ床面積：<%= @product.architectural_area%>m2</li>
-<<<<<<< Updated upstream
-          <%=link_to "edit" ,edit_product_path(@product)%>
-=======
       <%= link_to "edit", edit_product_path(@product)%>
->>>>>>> Stashed changes
     </ul>
   </div>
     <div class="show__slide">
       <div class="show__slide-wrapper">
-<<<<<<< Updated upstream
+
         <%@product.works.each_with_index do |work, i|%>
           <%= image_tag work.image.url ,class:'show_image',data:{index:i}%>
         <% end %>
@@ -27,22 +23,9 @@
       <ul class="show__slide__bar">
         <%@product.works.each_with_index do |work, i|%>
           <li><%= image_tag work.image.url, class:"show__bar-image" ,data:{index:i}%></li>
-=======
-        <%@product.works.each_with_index do |work , k|%>
-          <%= image_tag work.image.url ,class:'show__image',data:{index:k} %>
-        <% end %>
-      </div>
-      <ul class="show__slide__bar">
-        <%@product.works.each_with_index do |work ,j|%>
-          <li><%= image_tag work.image.url, class:"show__bar-image",data:{index:j}  %></li>
->>>>>>> Stashed changes
+
         <% end %>
       </ul>
     </div>
 </div> 
-<<<<<<< Updated upstream
 
-
-
-=======
->>>>>>> Stashed changes
