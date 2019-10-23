@@ -1,15 +1,34 @@
 $(function(){
 $('.works__slide').html('<%= j(render partial: 'show') %>')
+<<<<<<< Updated upstream
 $('.works-text').text("<%= @product.text%>")
 $('.works_heading').text("<%= @product.text%>")
+=======
+clearInterval(product_slide)
+var works_height=$(".works__slide").offset().top - $('.nav').height()
+console.log()
+
+$('html, body').animate({scrollTop:works_height});
+
+$('.works-text').text("<%= @product.text%>")
+>>>>>>> Stashed changes
 $('.show').css("display","none")
 $('.show').fadeIn(1000)
+$('.works__box-name').html('<h1 class="appear"><%= @product.name %></h1>')
+$('.works__box-dummy').css("background","#111")
 
+<<<<<<< Updated upstream
 var works_height = $('.works').offset().top - $('.nav').height()
 console.log(works_height)
 $('html ,body').animate({scrollTop:works_height})
 $('.show_image').css("display","none")
 $('.show_image').eq(0).fadeIn()
 
+=======
+$(".show__image").eq(0).fadeIn(function(){
+  <%# setInterval(show__slide , 3000) %>
+  
+})
+>>>>>>> Stashed changes
 
 })

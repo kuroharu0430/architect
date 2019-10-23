@@ -9,7 +9,7 @@
      width:0;
     }
     100%{
-    width:120%;
+    width:100%;
     }
   }    
 
@@ -142,7 +142,7 @@
     }
     // #####
     &-image{
-      width:900px;
+      width:1000px;
       height:650px;
       position:relative;
     }
@@ -168,23 +168,22 @@ h3{
 
 
 .hand_writing_second{
-  width:auto;
-  height:100%;
+  width:100%;
+  height:auto;
   position:absolute;
   transform: skew(30deg);
-
 }
 .hand_writing_first{
   filter:grayscale(100%);
   width:auto;
   height:100%;
   position:absolute;
+
 }
 .mask{
   transform: skew(-30deg);
   position:absolute;
   overflow:hidden;
-  // border:3px solid grey;
-  width:0%;
+  width:auto;
   height:100%;
 }

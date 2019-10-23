@@ -27,7 +27,7 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      redirect_to action: :edit
+      redirect_to root_path
     end
   end
 
