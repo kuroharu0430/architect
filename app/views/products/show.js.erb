@@ -3,7 +3,6 @@ $('.works__slide').html('<%= j(render partial: 'show') %>')
 
 clearInterval(product_slide)
 var works_height=$(".works__slide").offset().top - $('.nav').height()
-
 $('html, body').animate({scrollTop:works_height});
 
 $('.works-text').text("<%= @product.text%>")
@@ -12,12 +11,10 @@ $('.show').fadeIn(1000)
 $('.works__box-name').html('<h1 class="appear"><%= @product.name %></h1>')
 $('.works__box-dummy').css("background","#111")
 
-
 var works_height = $('.works').offset().top - $('.nav').height()
 $('html ,body').animate({scrollTop:works_height})
 $('.show__image').css("display","none")
 $('.show__image').eq(0).fadeIn()
-    <%# var slide_number = $(".show__image").length
-    console.log(slide_number) %>
+$(`.show__bar-image[data-index = ${j}]`).css("background","aqua")
 
 })

@@ -1,13 +1,17 @@
 $(function(){
-  j = 0
+  show =""
   $(".works__left-bar").click(function() {
+    j=0
+    if (show){
+      clearInterval(show)
+    }
     show = setInterval(show_reload,3000)
   })
 
   var show__slide = function(){
     var slide_number = $(".show__image").length
     j = j%slide_number
-    if (j<0){
+    if (j < 0){
       j = j + slide_number
     }
     console.log(j)
