@@ -21,6 +21,7 @@ li{
 }
 
 .nav{
+  // background:white;
   position:fixed;
   display:flex;
   justify-content: space-between;
@@ -35,15 +36,20 @@ li{
     list-style:none;
     margin:0;
     padding:0;
+    li{
+      line-height: 80px;
+      vertical-align: bottom;
 
+    }
   }
   &__name{
-    margin-top:1em;
-    width:60vw;
+    // background:white;
+    padding-top:1em;
+    width:100%;
     text-align:center;
     h1{
           // mix-blend-mode: difference;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.3em;
     margin-left:20px;
     font-size:2em;
     // padding:20px;
@@ -52,8 +58,10 @@ li{
 
     }
     p{
-      margin-top:1em;
-      font-size:1em;
+      margin-top:0.5em;
+      font-size:1.2em;
+      letter-spacing: 0.2em;
+
     }
   }
 
