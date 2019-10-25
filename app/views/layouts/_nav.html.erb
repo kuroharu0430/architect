@@ -6,9 +6,15 @@
   <ul class="header">
     <li class="header__list">about</li>
     <li class="header__list">flow</li>
-    <%= link_to user_session_path do%>
-      <li class="header__list">contact</li>
-    <%end%>
+    <%if user_signed_in?%>
+      <%= link_to user_path(current_user) do%>
+        <li class="header__list contact">contact</li>
+      <%end%>
+    <% else %>
+      <%= link_to user_session_path do%>
+        <li class="header__list contact">contact</li>
+      <%end%>
+    <% end %>
     <%= link_to new_product_path do%>
       <li class='header__list'>new</li>
     <% end %>

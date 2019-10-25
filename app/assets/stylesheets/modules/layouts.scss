@@ -4,10 +4,13 @@ body{
   margin:0;
   padding:0;
 }
+
 li{
   list-style:none;
 }
 
+a{
+}
 *{
   box-sizing: border-box
 }
@@ -19,6 +22,7 @@ li{
   object-fit:cover;
   position:absolute;
 }
+
 
 .nav{
   // background:white;
@@ -78,4 +82,19 @@ li{
   }
 }
 
-
+.contact{
+  display:flex;
+  flex-direction: column;
+  &__path{
+    // display:none;
+    list-style: none;
+    background:white;
+    li{
+      text-decoration: none;
+    }
+    &-list{
+      text-decoration: none;
+      list-style: none;
+    }
+  }
+}
