@@ -2,7 +2,7 @@
   <div class="show__data">
     <ul class="show__data-top">
       <li>所在地：<%= @product.place%></li>
-      <li>竣工年月日：<%= @product.date%></li>
+      <li>竣工年月日：<%= @product.date.strftime('%Y/%m/%d')%></li>
     </ul>
     <ul class="show__data-bottom">
       <li>主要規模：<%= @product.purpose%></li>

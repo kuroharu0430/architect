@@ -1,3 +1,5 @@
   <div class="message">
-    <%= message.text%>
+    <p class=message-text><%= message.text%></p>
+    <%= image_tag ""%>
+    <p class=message-date><%= message.created_at.strftime("%-m月%-d日 %-H時%-M分")%></p>
   </div>

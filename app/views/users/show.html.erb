@@ -1,6 +1,12 @@
-<h1>Users#show</h1>
+<h4><%=@user.name%></h4>
+<h4><%=current_user.id%></h4>
 <p>Find me in app/views/users/show.html.erb</p>
 <%= link_to destroy_user_session_path,method:'delete' do%>
-  <li>contact</li>
+  <li>log-out</li>
 <%end%>
+
+<%= link_to user_messages_path(@user) do%>
+  <li>chat</li>
+<%end%>
+
 

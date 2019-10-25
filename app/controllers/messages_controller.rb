@@ -1,29 +1,28 @@
 class MessagesController < ApplicationController
   before_action :set_user
-  def index
-    @message = Message.new
-    @messages =@user.messages.includes(:user)
+  before_action :authenticate_user!
 
+  def index
+    @messages = @user.messages
+    @message = Message.new
   end
 
   def create
     @message = @user.messages.new(message_params)
-    if @message
-      redirect_to action: :index
+    if @message.save
+    redirect_to user_messages_path
+    else
+      render action: :index
     end
   end
 
 
-  private 
+  private
   def message_params
-    params.require(:message).permit(:text, :image).merge(user_id:params[:user_id])
+    params.require(:message).permit(:text, :image).merge(user_id:current_user.id)
   end
 
   def set_user
-    @user = User.find(params[:user_id])
+    @user=User.find(params[:user_id])
   end
-
 end
-
-
-
