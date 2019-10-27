@@ -1,5 +1,13 @@
-  <div class="message">
-    <p class=message-text><%= message.text%></p>
+<% if message.roll == 1 %>
+  <div class="message customer">
+    <p class="message-text"><%= message.text%></p>
+    <p class="message-date"><%= message.created_at.strftime("%-m月%-d日 %-H時%-M分")%></p>
     <%= image_tag ""%>
-    <p class=message-date><%= message.created_at.strftime("%-m月%-d日 %-H時%-M分")%></p>
   </div>
+<% else %>
+  <div class="message admin">
+    <p class="message-text"><%= message.text%></p>
+    <p class="message-date"><%= message.created_at.strftime("%-m月%-d日 %-H時%-M分")%></p>
+    <%= image_tag ""%>
+  </div>
+<% end %>
