@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
-  get 'users/show'
+  devise_for :customers
+  get 'customers/show'
   ActiveAdmin.routes(self)
-  devise_for :users
   root to: "products#index"
     resources :products do
-      resources :works 
+      resources :product_images 
     end
 
-  resources :users do
+  resources :customers do
     resources :messages
   end
 

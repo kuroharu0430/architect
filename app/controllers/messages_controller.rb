@@ -1,14 +1,14 @@
 class MessagesController < ApplicationController
-  before_action :set_user
-  before_action :authenticate_user! unless :current_admin_user
+  before_action :set_customer
+  before_action :authenticate_customer! unless :current_admin_user
 
   def index
-    @messages = @user.messages
+    @messages = @customer.messages
     @message = Message.new
   end
 
   def create
-    @message = @user.messages.new(message_params)
+    @message = @customer.messages.new(message_params)
     if current_admin_user
       @message.roll = 0
     else
@@ -16,7 +16,7 @@ class MessagesController < ApplicationController
     end
     
     if @message.save
-    redirect_to user_messages_path
+    redirect_to customer_messages_path
     else
       render action: :index
     end
@@ -28,7 +28,7 @@ class MessagesController < ApplicationController
     params.require(:message).permit(:text, :image)
   end
 
-  def set_user
-    @user=User.find(params[:user_id])
+  def set_customer
+    @customer=Customer.find(params[:customer_id])
   end
 end

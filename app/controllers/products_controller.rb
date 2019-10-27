@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
-    @product.works.build
+    @product.product_images.build
   end
 
   def create
@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    @product.works.build
+    @product.product_images.build
   end
 
   def update
@@ -32,7 +32,7 @@ class ProductsController < ApplicationController
 
   private
   def product_params
-    params.require(:product).permit(:name,:text,:image,:date,:place,:purpose,:scale,:site_area,:building_area,:architectural_area, works_attributes: [:_destroy,:id,:image])
+    params.require(:product).permit(:name,:text,:image,:date,:place,:purpose,:scale,:site_area,:building_area,:architectural_area, product_images_attributes: [:_destroy,:id,:src])
   end
 
   def set_product

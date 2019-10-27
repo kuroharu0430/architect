@@ -25,19 +25,19 @@
 
     <div class="works__image">
           <div class="works_output_area"></div>
-          <% @product.works.each_with_index do |work ,i|%>
-            <%if work.persisted?%>
+          <% @product.product_images.each_with_index do |image ,i|%>
+            <%if image.persisted?%>
               <div class="image-wrapper">
-                <%= image_tag work.image.url, class:"works_output" %>
+                <%= image_tag product_image.src.url, class:"works_output" %>
                 <div class="image_remove" >削除</div>
               </div>
             <% end %>
           <%end%>
 
         <div class="works_input_area"> 
-          <%=f.fields_for :works do |image|%>
-            <%=image.label :image ,class:"works_input",data:{index:"0"} do%>
-              <%= image.file_field :image ,class:"works_file_field"%>
+          <%=f.fields_for :product_images do |image|%>
+            <%=image.label :src ,class:"works_input",data:{index:"0"} do%>
+              <%= image.file_field :src ,class:"works_file_field"%>
                 <%if image.object.persisted?%> 
                   <%= image.check_box :_destroy,class:'hidden'%>
                   <%= image.label :_destroy, "",class:"image_destroy"%>
