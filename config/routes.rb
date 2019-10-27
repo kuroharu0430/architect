@@ -4,9 +4,7 @@ Rails.application.routes.draw do
   get 'customers/show'
   ActiveAdmin.routes(self)
   root to: "products#index"
-    resources :products do
-      resources :product_images 
-    end
+    resources :products
 
   resources :customers do
     resources :messages

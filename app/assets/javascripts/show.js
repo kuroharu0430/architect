@@ -14,7 +14,6 @@ $(function(){
     if (j < 0){
       j = j + slide_number
     }
-    console.log(j)
     $(".show__image").fadeOut()
     $(`.show__image[data-index = ${j}]`).fadeIn(1000)
     $(".show__bar-image").css("background","none")

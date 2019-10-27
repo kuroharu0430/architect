@@ -28,7 +28,7 @@
           <% @product.product_images.each_with_index do |image ,i|%>
             <%if image.persisted?%>
               <div class="image-wrapper">
-                <%= image_tag product_image.src.url, class:"works_output" %>
+                <%= image_tag image.src.url, class:"works_output" %>
                 <div class="image_remove" >削除</div>
               </div>
             <% end %>

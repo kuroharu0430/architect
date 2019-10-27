@@ -24,8 +24,8 @@ $(".works__image").on("change",'.works_file_field',function(){
 
   var append_input= function(){
     index++
-    $('.works_input_area').append(`<label data-index=${index} class="works_input" for="product_works_attributes_${index}_image">
-    <input class="works_file_field" type="file" name="product[works_attributes][${index}][image]" id="product_works_attributes_${index}_image">
+    $('.works_input_area').append(`<label data-index=${index} class="works_input" for="product_product_images_attributes_${index}_src">
+    <input class="works_file_field" type="file" name="product[product_images_attributes][${index}][src]" id="product_product_images_attributes_${index}_src">
    </label>`)
   }
 

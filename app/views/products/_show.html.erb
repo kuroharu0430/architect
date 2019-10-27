@@ -17,13 +17,13 @@
       <div class="show__slide-wrapper">
         <i class="fas fa-caret-square-left prev"></i>
         <i class="fas fa-caret-square-right next"></i>
-        <%@product.works.each_with_index do |work, i|%>
-          <%= image_tag work.image.url ,class:'show__image',data:{index:i}%>
+        <%@product.product_images.each_with_index do |image, i|%>
+          <%= image_tag image.src.url ,class:'show__image',data:{index:i}%>
         <% end %>
       </div>
       <ul class="show__slide__bar">
-        <%@product.works.each_with_index do |work, i|%>
-          <li><%= image_tag work.image.url, class:"show__bar-image" ,data:{index:i}%></li>
+        <%@product.product_images.each_with_index do |image, i|%>
+          <li><%= image_tag image.src.url, class:"show__bar-image" ,data:{index:i}%></li>
 
         <% end %>
       </ul>
