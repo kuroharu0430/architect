@@ -17,9 +17,12 @@ class MessagesController < ApplicationController
     end
     
     if @message.save
-    redirect_to customer_messages_path
+      redirect_to customer_messages_path
     else
-      render action: :index
+      @messages =@customer.messages
+      # flash.now[:alert] ='メッセージを入力してください'
+
+      render :index
     end
   end
 
