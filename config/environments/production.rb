@@ -91,4 +91,7 @@ Rails.application.configure do
   config.assets.initialize_on_precompile=false
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.serve_static_assets = true
+  config.assets.digest  =true
 end
