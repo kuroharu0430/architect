@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product,except: [:index,:new, :create]
+  before_action :current_admin_user?,except: [:index,:show]
+
   def index 
     @products = Product.all.limit(4)
   end
@@ -38,5 +40,9 @@ class ProductsController < ApplicationController
   def set_product
     @product = Product.find(params[:id])
   end
+
+  def current_admin_user?
+    redirect_to root_path unless current_admin_user
+  end 
 
 end

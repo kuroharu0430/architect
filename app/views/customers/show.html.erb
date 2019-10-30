@@ -1,12 +1,13 @@
-<h4><%=@customer.name%></h4>
-<h4><%=current_customer.id%></h4>
-<p>Find me in app/views/customers/show.html.erb</p>
-<%= link_to destroy_customer_session_path,method:'delete' do%>
-  <li>log-out</li>
-<%end%>
+<div class="customer__show">
+  <h4>ようこそ<%=@customer.name%>様</h4>
 
-<%= link_to customer_messages_path(@customer) do%>
-  <li>chat</li>
-<%end%>
+  <ul>
+    <%= link_to customer_messages_path(@customer) do%>
+      <li>chat</li>
+    <%end%>
+    <%= link_to destroy_customer_session_path,method:'delete' do%>
+      <li>log-out</li>
+    <%end%>
+</div>
 
 
