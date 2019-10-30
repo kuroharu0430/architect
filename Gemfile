@@ -71,7 +71,7 @@ gem 'activeadmin'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 gem 'rails-i18n'
-
+gem 'sassc', '~> 2.0'
 
 group :production do
   gem 'unicorn', '5.4.1'
