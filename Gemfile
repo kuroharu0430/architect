@@ -66,7 +66,7 @@ gem "jquery-rails"
 gem 'pry-rails'
 gem 'carrierwave'
 gem 'mini_magick'
-# gem "font-awesome-rails"
+gem "font-awesome-rails"
 gem 'devise'
 gem 'activeadmin'
 gem 'devise-i18n'
