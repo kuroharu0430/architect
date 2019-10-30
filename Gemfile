@@ -75,4 +75,6 @@ gem 'sassc', '~> 2.2', '>= 2.2.1'
 
 group :production do
   gem 'unicorn', '5.4.1'
+  gem 'sassc', '~> 2.2', '>= 2.2.1'
+
 end
