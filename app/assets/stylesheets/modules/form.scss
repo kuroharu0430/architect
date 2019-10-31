@@ -101,7 +101,6 @@
   display:flex;
   width:100%;
   height:200px;
-  background:#ccc;
 }
 .works{
   &_output{
@@ -109,11 +108,15 @@
     height:80%;
   }
   &_output_area{
+    width:750px;
+    height:200px;
+    background:#ccc;
     display:flex;
     flex-wrap: wrap;
   }
   &_input_area{
-    height:100%;
+    background:red;
+    height:50px;
     width:100%;
     position:relative;
     .works_input{
