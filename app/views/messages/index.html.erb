@@ -2,7 +2,7 @@
   <div class="messages-image"></div>
   <ul class="messages-nav">
     <li><%= @customer.name%> 様</li>
-    <li><%= Time.now.strftime("%-m月%-d日 %-H時%-M分")%></li>
+    <li><%= Time.zone.now.strftime("%-m月%-d日 %-H時%-M分")%></li>
     <li><%=link_to "top", root_path%></li>
   </ul>
 
