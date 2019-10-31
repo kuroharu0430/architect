@@ -10,6 +10,7 @@ module Architect
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
+    config.time_zone = 'Osaka'
     config.generators do |g|
     config.i18n.default_locale = :ja
       g.stylesheets false
