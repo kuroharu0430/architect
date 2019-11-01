@@ -1,5 +1,6 @@
 $(function(){
-  index=0
+  var index=$('.works_output').length
+  console.log($('.works_output').length)
   
   $(".image_form").on("change",'.file_field',function(){
     var file = $(this).prop('files')[0];
@@ -31,10 +32,10 @@ $(".works_input_area").on("change",'.works_file_field',function(){
 
   $(".form__container").on("click",".image_remove",function(){
     var remove_index = $(this).attr("data-index")
+    console.log(remove_index)
     $(this).parent().remove()
     $(`.works_input[data-index = ${remove_index}]`).remove()
-
+    $(`.image_destroy[for = product_product_images_attributes_${remove_index}__destroy]`).click()
   })
-
 
 })

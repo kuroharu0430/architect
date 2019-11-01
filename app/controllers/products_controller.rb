@@ -32,6 +32,11 @@ class ProductsController < ApplicationController
     end
   end
 
+  def destroy
+    @product.destroy
+    redirect_to root_path
+  end
+
   private
   def product_params
     params.require(:product).permit(:name,:text,:image,:date,:place,:purpose,:scale,:site_area,:building_area,:architectural_area, product_images_attributes: [:_destroy,:id,:src])

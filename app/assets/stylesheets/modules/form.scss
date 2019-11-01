@@ -11,6 +11,8 @@
 
 .new_product{
   font-size:30px;
+  margin:20px auto;
+  text-align:center;
 }
 
 .form{
@@ -104,7 +106,7 @@
 }
 .works{
   &_output{
-    width:150px;
+    width:146px;
     height:80%;
   }
   &_output_area{
@@ -115,12 +117,17 @@
     flex-wrap: wrap;
   }
   &_input_area{
-    background:red;
+    margin:20px auto;
+    text-align:center;
+    background:blue;
+    color:white;
     height:50px;
-    width:100%;
+    line-height:50px;
+    width:500px;
     position:relative;
     .works_input{
       position:absolute;
+      left:0;
       width:100%;
       height:100%;
     }
@@ -137,3 +144,6 @@
   background:#eee;
 }
 
+.hidden{
+  display:none;
+}
