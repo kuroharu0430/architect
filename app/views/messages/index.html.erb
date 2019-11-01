@@ -1,23 +1,24 @@
-<div class="messages">
-  <div class="messages-image"></div>
-  <ul class="messages-nav">
-    <li><%= @customer.name%> 様</li>
-    <li><%= Time.zone.now.strftime("%-m月%-d日 %-H時%-M分")%></li>
-    <li><%=link_to "top", root_path%></li>
-  </ul>
+<div class="message__wrapper"> 
+  <div class="messages">
+    <div class="messages-image"></div>
+    <ul class="messages-nav">
+      <li><%= @customer.name%> 様</li>
+      <li><%= Time.zone.now.strftime("%-m月%-d日 %-H時%-M分")%></li>
+      <li><%=link_to "top", root_path%></li>
+    </ul>
 
-  <div class="messages-main">
-    <div class="messages-main__chat">
-      <%= render @messages%>
+    <div class="messages-main">
+      <div class="messages-main__chat">
+        <%= render @messages%>
+      </div>
+      <div class="main__user">
+      </div>
     </div>
-    <div class="main__user">
+    <%= form_with model:[@customer, @message],id:'message_form' do |f|%> 
+      <div class="messages-form">
+        <%= f.text_field :text ,placeholder:"message" ,class:'messages-form-text'%>
+        <%= f.submit '送信' ,id:'messages-form-btn'%>
     </div>
+    <%end%>
   </div>
-  <%= form_with model:[@customer, @message], local: true do |f|%> 
-    <div class="messages-form">
-      <%= f.text_field :text ,placeholder:"message" ,class:'messages-form-text'%>
-      <%= f.submit '送信' ,class:'messages-form-btn'%>
-  </div>
-  <%end%>
 </div>
-

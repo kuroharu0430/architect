@@ -1,6 +1,5 @@
 $(function(){
   var index=$('.works_output').length
-  console.log($('.works_output').length)
   
   $(".image_form").on("change",'.file_field',function(){
     var file = $(this).prop('files')[0];

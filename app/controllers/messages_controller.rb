@@ -15,13 +15,10 @@ class MessagesController < ApplicationController
     else
       @message.roll = 1
     end
-    
     if @message.save
-      redirect_to customer_messages_path
     else
       @messages =@customer.messages
-      # flash.now[:alert] ='メッセージを入力してください'
-
+      flash.now[:alert] ='メッセージを入力してください'
       render :index
     end
   end
