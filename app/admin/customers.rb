@@ -8,6 +8,7 @@ ActiveAdmin.register Customer do
     actions defaults: true do |customer|
       item ('message'), customer_messages_path(customer), class: 'view_link member_link'
     end
+    
   end
 
   # See permitted parameters documentation:
