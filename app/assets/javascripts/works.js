@@ -1,4 +1,5 @@
 $(function(){
+
   $('.works__slide').css("opacity","0")
   $('.works__slide-image').css("display","none")
   $('.works__box-dummy').css("display","none")
