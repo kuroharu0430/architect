@@ -30,12 +30,6 @@ class MessagesController < ApplicationController
   end
 
   def set_customer
-    @customer=Customer.find(params[:customer_id])
-  end
-
-  def redirect_to_root
-    if current_customer.id != params[:customer_id].to_i
-      redirect_to root_path
-    end
+    @customer=Customer.find_by(id:current_customer.id)
   end
 end
