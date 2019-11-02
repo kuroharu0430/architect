@@ -8,9 +8,8 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     case resource
     when Customer
-      customer_messages_path(current_customer)
+      messages_path(current_customer)
     when AdminUser
-      #AdminUser（管理ユーザ）がログインしたときの処理
       stored_location_for(resource) ||
        if resource.is_a?(AdminUser)
          root_path
@@ -23,9 +22,8 @@ class ApplicationController < ActionController::Base
   def after_sign_up_path_for(resource)
     case resource
     when Customer
-      customer_messages_path(current_customer)
+      messages_path(current_customer)
     when AdminUser
-      #AdminUser（管理ユーザ）がログインしたときの処理
       stored_location_for(resource) ||
        if resource.is_a?(AdminUser)
          root_path
