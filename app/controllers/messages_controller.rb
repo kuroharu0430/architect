@@ -1,7 +1,6 @@
 class MessagesController < ApplicationController
   before_action :set_customer
   before_action :authenticate_customer! unless :current_admin_user
-  before_action :redirect_to_root, unless: :current_admin_user
 
   def index
     @messages = @customer.messages
