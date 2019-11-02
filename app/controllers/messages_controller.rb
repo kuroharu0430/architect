@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   before_action :set_customer
   before_action :authenticate_customer! unless :current_admin_user
+  before_action :redirect_to_root, unless: :current_admin_user
 
   def index
     @messages = @customer.messages
@@ -17,6 +18,7 @@ class MessagesController < ApplicationController
     if @message.save
     else
       @messages =@customer.messages
+      flash.now[:alert] ='メッセージを入力してください'
       render :index
     end
   end
@@ -28,6 +30,12 @@ class MessagesController < ApplicationController
   end
 
   def set_customer
-    @customer=Customer.find_by(id: current_customer.id)
+    @customer=Customer.find(params[:customer_id])
+  end
+
+  def redirect_to_root
+    if current_customer.id != params[:customer_id].to_i
+      redirect_to root_path
+    end
   end
 end

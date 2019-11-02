@@ -3,7 +3,7 @@
     <div class="messages-image"></div>
     <ul class="messages-nav">
       <li><%= @customer.name%> 様</li>
-      <li><%=link_to "log-out", destroy_customer_session_path,method:'delete'%></li>
+      <li><%= Time.zone.now.strftime("%-m月%-d日 %-H時%-M分")%></li>
       <li><%=link_to "top", root_path%></li>
     </ul>
 
@@ -14,7 +14,7 @@
       <div class="main__user">
       </div>
     </div>
-    <%= form_with model:[@message],id:'message_form' do |f|%> 
+    <%= form_with model:[@customer, @message],id:'message_form' do |f|%> 
       <div class="messages-form">
         <%= f.text_field :text ,placeholder:"message" ,class:'messages-form-text'%>
         <%= f.submit '送信' ,id:'messages-form-btn'%>
