@@ -1,24 +1,5 @@
 ActiveAdmin.register Customer do
 
-  index do
-    column :id
-    column :name
-    column :email
-    column :state
-
-
-    actions all: false do |customer|
-      item ('contact'), customer_messages_path(customer), class: 'view_link member_link'
-    end
-  end
-
-  controller do
-    def edit
-
-    end
-  end
-
-  
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #

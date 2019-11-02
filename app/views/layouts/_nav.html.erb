@@ -7,7 +7,7 @@
     <li class="header__list">about</li>
     <li class="header__list">flow</li>
     <%if customer_signed_in?%>
-      <%= link_to messages_path(current_customer) do%>
+      <%= link_to customer_path(current_customer) do%>
         <li class="header__list contact">contact</li>
       <%end%>
     <% else %>
