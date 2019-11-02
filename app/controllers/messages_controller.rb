@@ -17,7 +17,6 @@ class MessagesController < ApplicationController
     if @message.save
     else
       @messages =@customer.messages
-      flash.now[:alert] ='メッセージを入力してください'
       render :index
     end
   end
@@ -29,7 +28,7 @@ class MessagesController < ApplicationController
   end
 
   def set_customer
-    @customer=Customer.find(params[:customer_id])
-  end
 
+    @customer=Customer.find_by(id: current_customer.id)
+  end
 end
