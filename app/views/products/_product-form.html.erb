@@ -1,6 +1,7 @@
 <%= form_with model:@product, local: true do |f|%> 
   <div class="form">
     <div class="form__container">
+    <%= link_to "top" , root_path %>
       <div class="form__content">
         <%=f.label :name ,"name",class:"label"%>
         <%= f.text_field :name ,class:"input"%>
@@ -23,30 +24,29 @@
       </div>
      <p class="works_heading"> works-image </p>
 
-    <div class="works__image">
-          <div class="works_output_area"></div>
-          <% @product.product_images.each_with_index do |image ,i|%>
-            <%if image.persisted?%>
-              <div class="image-wrapper">
-                <%= image_tag image.src.url, class:"works_output" %>
-                <div class="image_remove" >削除</div>
-              </div>
-            <% end %>
-          <%end%>
+          <div class="works_output_area">
+            <% @product.product_images.each_with_index do |image ,i|%>
+              <%if image.persisted?%>
+                <div class="image-wrapper">
+                  <%= image_tag image.src.url, class:"works_output" %>
+                  <div class="image_remove" data-index = <%=i%> >削除</div>
+                </div>
+              <% end %>
+            <%end%>
+          </div>
 
         <div class="works_input_area"> 
+          ここをクリックして写真を添付
           <%=f.fields_for :product_images do |image|%>
-            <%=image.label :src ,class:"works_input",data:{index:"0"} do%>
+            <%=image.label :src ,class:"works_input",data:{index:@product.product_images.count}  do%>
               <%= image.file_field :src ,class:"works_file_field"%>
                 <%if image.object.persisted?%> 
                   <%= image.check_box :_destroy,class:'hidden'%>
-                  <%= image.label :_destroy, "",class:"image_destroy"%>
+                  <%= image.label :_destroy, "",class:"image_destroy hidden"%>
                 <% end %>
-            <%end%>
+              <%end%>
           <% end %>
         </div>
-    </div>
-      <p>⬆ここをクリックして写真を添付</p>
       
       <div class="form__content">
         <%=f.label :date ,"竣工年月日",class:"label"%>

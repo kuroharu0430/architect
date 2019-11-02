@@ -6,7 +6,6 @@ $(function(){
 
   var worksFlag =false
   $(window).on('scroll', function(){
-    
       var height=$(window).scrollTop()+$(window).height()-200;
         if ( height > $(".works").offset().top){
           if(!worksFlag){

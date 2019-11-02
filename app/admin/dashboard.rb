@@ -6,6 +6,9 @@ ActiveAdmin.register_page "Dashboard" do
       span class: "blank_slate" do
         span I18n.t("active_admin.dashboard_welcome.welcome")
         small I18n.t("active_admin.dashboard_welcome.call_to_action")
+        link_to root_path do
+          span "top"
+        end
       end
     end
 
