@@ -10,7 +10,6 @@ class ApplicationController < ActionController::Base
     when Customer
       messages_path(current_customer)
     when AdminUser
-      #AdminUser（管理ユーザ）がログインしたときの処理
       stored_location_for(resource) ||
        if resource.is_a?(AdminUser)
          root_path
@@ -25,7 +24,6 @@ class ApplicationController < ActionController::Base
     when Customer
       messages_path(current_customer)
     when AdminUser
-      #AdminUser（管理ユーザ）がログインしたときの処理
       stored_location_for(resource) ||
        if resource.is_a?(AdminUser)
          root_path
