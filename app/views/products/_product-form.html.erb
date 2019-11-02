@@ -1,6 +1,7 @@
 <%= form_with model:@product, local: true do |f|%> 
   <div class="form">
     <div class="form__container">
+    <%= link_to "top" , root_path %>
       <div class="form__content">
         <%=f.label :name ,"name",class:"label"%>
         <%= f.text_field :name ,class:"input"%>
