@@ -1,6 +1,7 @@
 $(function(){
   var index=$('.works_output').length
-  
+
+ 
   $(".image_form").on("change",'.file_field',function(){
     var file = $(this).prop('files')[0];
     var fileReader = new FileReader();
@@ -11,7 +12,9 @@ $(function(){
     fileReader.readAsDataURL(file);
 })
 
+
 $(".works_input_area").on("change",'.works_file_field',function(){
+
   var file = $(this).prop('files')[0];
   var fileReader = new FileReader();
   
@@ -31,6 +34,7 @@ $(".works_input_area").on("change",'.works_file_field',function(){
 
   $(".form__container").on("click",".image_remove",function(){
     var remove_index = $(this).attr("data-index")
+
     console.log(remove_index)
     $(this).parent().remove()
     $(`.works_input[data-index = ${remove_index}]`).remove()
