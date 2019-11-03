@@ -23,10 +23,14 @@ $(function(){
       $(this).height(lineHeight * lines);
 
       $('#messages-form-btn').on('click',function(){
-        console.log('sasa')
         location.reload()
       })
-        });
+    });
+    $('.message-image').click(function(){
+      console.log('dada')
+      $(this).toggleClass("scale")
+    })
+
   });
 
   
