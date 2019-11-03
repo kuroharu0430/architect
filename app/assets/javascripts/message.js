@@ -33,7 +33,7 @@ $(function(){
 
 
   });
-  $('.messages-form-btn').on('submit',function(){
+  $('.messages-form-btn').on('click',function(){
     location.reload()
   })
 
