@@ -16,7 +16,7 @@
     </div>
     <%= form_with model:[@customer, @message],id:'message_form' do |f|%> 
       <div class="messages-form">
-        <%= f.text_field :text ,placeholder:"message" ,class:'messages-form-text'%>
+        <%= f.text_area :text ,placeholder:"message" ,class:'messages-form-text'%>
         <%= f.submit '送信' ,id:'messages-form-btn'%>
     </div>
     <%end%>

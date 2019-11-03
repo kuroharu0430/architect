@@ -16,6 +16,15 @@ $(function(){
   }
   setInterval(reload_messages, 5000)
 
-
+  $(function() {
+    var $textarea = $('.messages-form-text');
+    var lineHeight = parseInt($textarea.css('lineHeight'));
+    $textarea.on('input', function(evt) {
+      var lines = ($(this).val() + '\n').match(/\n/g).length;
+      $(this).height(lineHeight * lines);
+    });
+    console.log($textarea)
+  });
   
+
 })
