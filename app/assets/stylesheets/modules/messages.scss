@@ -1,7 +1,7 @@
 $message_width:750px;
 
 .message__wrapper{
-  background:url(/winter-260817_960_720.jpg);
+  background:url(/winter.jpg);
   background-size:cover;
   position:fixed;
   z-index:-2;
@@ -23,7 +23,7 @@ $message_width:750px;
     z-index:-1;
     width:$message_width;
     height:100vh;
-    background:url(/photo-1492571350019-22de08371fd3.jpeg);
+    background:url(/photo-message.jpg);
     background-size:cover;
     background-position:center ;
   }
