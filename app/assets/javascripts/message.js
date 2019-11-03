@@ -9,7 +9,7 @@ $(function(){
         url:'messages/auto',
         type:'get',
         datatype:'json',
-        data:{id: last_message_id}
+        data:{id: last_message_id} 
       })
     }
   }
