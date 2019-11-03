@@ -1,17 +1,25 @@
 <% if message.roll == 1 %>
   <div class="message customer" data-mesage_id="<%=message.id%>">
     <p class="message-text"><%= message.text%></p>
+<<<<<<< Updated upstream
     <%if message.image.present?%>
       <div><%= image_tag message.image.url, class:"message-image"%></div>
     <% end %>
+=======
+    <%# <%= image_tag message.image.url%> %>
+>>>>>>> Stashed changes
     <p class="message-date"><%= message.created_at.strftime("%-m月%-d日 %-H時%-M分")%></p>
   </div>
 <% else %>
   <div class="message admin" data-mesage_id="<%=message.id%>">
     <p class="message-text"><%= message.text%></p>
+<<<<<<< Updated upstream
     <%if message.image.present?%>
       <div><%= image_tag message.image.url, class:"message-image"%></div>
     <% end %>
+=======
+    <%# <%= image_tag message.image.url%> %>
+>>>>>>> Stashed changes
     <p class="message-date"><%= message.created_at.strftime("%-m月%-d日 %-H時%-M分")%></p>
   </div>
 <% end %>

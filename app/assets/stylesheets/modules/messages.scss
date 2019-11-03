@@ -86,6 +86,7 @@ $message_width:750px;
       line-height:30px;
       max-height: 200px;
       overflow: hidden;
+      white-space:pre-line;
       
     }
   }
@@ -95,8 +96,12 @@ $message_width:750px;
 .message{
 
     &-text{
+<<<<<<< Updated upstream
     word-wrap :break-word;
     white-space:pre-line;
+=======
+    white-space:pre;
+>>>>>>> Stashed changes
     position:relative;
     text-align:left;
     display:inline-block;

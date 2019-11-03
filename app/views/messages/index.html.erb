@@ -17,6 +17,7 @@
     <%= form_with model:[@customer, @message],id:'message_form' do |f|%> 
       <div class="messages-form">
         <%= f.text_area :text ,placeholder:"message" ,class:'messages-form-text'%>
+        <%= f.file_field :text ,class:'messages-form-file'%>
         <%= f.submit '送信' ,id:'messages-form-btn'%>
         <%if admin_user_signed_in?%>
           <%= f.file_field :image ,id:'messages-form-image'%>
