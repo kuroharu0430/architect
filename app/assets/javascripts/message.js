@@ -6,7 +6,6 @@ $(function(){
     var reload_messages = function(){
       var last_message_id = $('.message:last').attr("data-mesage_id")
       console.log(last_message_id)
-  
       $.ajax({
         url:'messages/auto',
         type:'get',
