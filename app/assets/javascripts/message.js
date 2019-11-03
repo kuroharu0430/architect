@@ -22,9 +22,9 @@ $(function(){
       var lines = ($(this).val() + '\n').match(/\n/g).length;
       $(this).height(lineHeight * lines);
 
-      $textarea.on('change',function(){
-        location.reload()
-      })
+      // $textarea.on('change',function(){
+      //   location.reload()
+      // })
         });
   });
 

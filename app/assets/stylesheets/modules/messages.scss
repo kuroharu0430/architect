@@ -93,6 +93,7 @@ $message_width:750px;
 }
 
 .message{
+
     &-text{
     word-wrap :break-word;
     white-space:pre-line;
@@ -111,8 +112,14 @@ $message_width:750px;
     margin:0.5em;
 
   }
-}
+  &-image{
+    object-fit:cover;
+    width:200px;
+    height:200px;
+    margin:0.5em;
 
+  }
+}
 .admin{
   text-align:right;
 }
