@@ -17,7 +17,6 @@ $message_width:750px;
   width:$message_width;
   &-image{
     content:"";
-    // filter:grayscale(100%);
     position:absolute;
     position:fixed;
     z-index:-1;
