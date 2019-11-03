@@ -21,7 +21,6 @@ $(function(){
     $textarea.on('input', function(evt) {
       var lines = ($(this).val() + '\n').match(/\n/g).length;
       $(this).height(lineHeight * lines);
-<<<<<<< Updated upstream
 
       $('#messages-form-btn').on('click',function(){
         location.reload()
@@ -32,9 +31,7 @@ $(function(){
       $(this).toggleClass("scale")
     })
 
-=======
-        });
->>>>>>> Stashed changes
+
   });
   $('.messages-form-btn').on('submit',function(){
     location.reload()

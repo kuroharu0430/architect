@@ -9,7 +9,6 @@ class MessagesController < ApplicationController
   end
 
   def create
-    binding.pry
     @message = @customer.messages.new(message_params)
     if current_admin_user
       @message.roll = 0
