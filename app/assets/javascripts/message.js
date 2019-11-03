@@ -15,4 +15,7 @@ $(function(){
     }
   }
   setInterval(reload_messages, 5000)
+
+
+  
 })

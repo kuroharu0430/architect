@@ -61,12 +61,12 @@ $message_width:750px;
     }
   }
   &-form{
-    position:relative;
+    position:fixed;
+    display:flex;
     background:rgba(black,0.9);
     bottom:0;
     width:$message_width;
-    padding:2% 5%;
-    height:130px;
+    padding:40px 2%;
     &:before{
       content:"Plese write your message";
       position:absolute;
@@ -78,7 +78,7 @@ $message_width:750px;
 
     }
     &-text{
-      margin:3%;
+      margin-right:5%;
       width:100%;
       height:50px;
       max-height: 200px;
