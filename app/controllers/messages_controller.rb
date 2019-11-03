@@ -23,6 +23,12 @@ class MessagesController < ApplicationController
     end
   end
 
+  def auto
+    @messages = @customer.messages
+    last_message_id = params[:id].to_i
+    @messages =@customer.messages.includes(:customer).where("id > #{last_message_id}")
+  end
+
 
   private
   def message_params
