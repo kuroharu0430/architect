@@ -19,7 +19,7 @@
         <%= f.text_area :text ,placeholder:"message" ,class:'messages-form-text'%>
         <%= f.submit '送信' ,id:'messages-form-btn'%>
         <%if admin_user_signed_in?%>
-          <%= f.file_field :image ,id:'messages-form-field'%>
+          <%= f.file_field :image ,id:'messages-form-image'%>
         <% end %>
     </div>
     <%end%>

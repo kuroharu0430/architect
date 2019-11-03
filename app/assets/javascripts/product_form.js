@@ -1,6 +1,6 @@
 $(function(){
   var index=$('.works_output').length
-  
+
   $(".image_form").on("change",'.file_field',function(){
     var file = $(this).prop('files')[0];
     var fileReader = new FileReader();

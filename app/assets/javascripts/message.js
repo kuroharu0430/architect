@@ -22,9 +22,10 @@ $(function(){
       var lines = ($(this).val() + '\n').match(/\n/g).length;
       $(this).height(lineHeight * lines);
 
-      // $textarea.on('change',function(){
-      //   location.reload()
-      // })
+      $('#messages-form-btn').on('click',function(){
+        console.log('sasa')
+        location.reload()
+      })
         });
   });
 
