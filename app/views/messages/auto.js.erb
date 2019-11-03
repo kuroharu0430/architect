@@ -1,4 +1,8 @@
+$(function(e){
+
 $('.messages-main__chat').append('<%= j(render partial: 'message',collection: @messages) %>')
-$('.messages-form-text').val('');
-var last_message_height =$('.messages-main').get(0).scrollHeight
+<%# var last_message_height =$('.messages-main').get(0).scrollHeight
 $('.messages-main').animate({scrollTop:last_message_height});
+ %>
+  console.log("success")
+})
