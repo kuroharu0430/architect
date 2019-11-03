@@ -1,8 +1,7 @@
 $(function(){
 $('.messages-main__chat').append('<%= j(render partial: 'message',locals: { message: @message }) %>')
 $('.messages-form-text').val('');
-var last_message_height = $('.message').last().offset().top
-console.log(last_message_height)
+var last_message_height =$('.messages-main').get(0).scrollHeight
 $('.messages-main').animate({scrollTop:last_message_height});
 })
 
