@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
   before_action :set_customer
-  before_action :authenticate_customer! unless :current_admin_user
-  before_action :ensure_customer unless :current_admin_user
+  before_action :authenticate_customer! if :current_admin_user
+  before_action :ensure_customer if :current_admin_user
 
   def index
     @messages = @customer.messages
@@ -40,8 +40,8 @@ class MessagesController < ApplicationController
   end
 
   def ensure_customer
-    if current_customer.id == params[:id].to_i
-      redirect_to roo_path
+    if current_customer.id != params[:customer_id].to_i
+      redirect_to root_path
     end
   end
 end

@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product,except: [:index,:new, :create]
-  # before_action :current_admin_user?,except: [:index,:show]
+  before_action :current_admin_user?,except: [:index,:show]
 
   def index 
     @products = Product.all.limit(4)
