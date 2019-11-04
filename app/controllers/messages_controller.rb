@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
   before_action :set_customer
-  before_action :authenticate_customer! if :current_admin_user
-  before_action :ensure_customer if :current_admin_user
+  before_action :authenticate_customer! ,unless: :current_admin_user
+  before_action :ensure_customer ,unless: :current_admin_user
 
   def index
     @messages = @customer.messages
