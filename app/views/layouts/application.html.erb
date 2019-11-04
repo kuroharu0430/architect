@@ -16,6 +16,9 @@
   </head>
 
   <body>
+  <% if admin_user_signed_in?%>
+    <%= link_to "管理画面へ", admin_root_path,class:"admin_path"%>
+  <% end%>
     <%= yield %>
   </body>
 </html>
