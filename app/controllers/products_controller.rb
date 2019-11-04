@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
-      redirect_to action: :new
+      redirect_to admin_root_pateh
     end
   end
 
@@ -28,13 +28,13 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      redirect_to root_path
+      redirect_to admin_root_pateh
     end
   end
 
   def destroy
     @product.destroy
-    redirect_to root_path
+    redirect_to admin_root_pateh
   end
 
   private
