@@ -22,9 +22,6 @@ $(function(){
       var lines = ($(this).val() + '\n').match(/\n/g).length;
       $(this).height(lineHeight * lines); 
 
-      // $('#messages-form-btn').on('click',function(){
-      //   location.reload()
-      // })
     });
     $('.message-image').click(function(){
       console.log('dada')
