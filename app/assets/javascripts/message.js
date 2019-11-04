@@ -20,11 +20,11 @@ $(function(){
     var lineHeight = parseInt($textarea.css('lineHeight'));
     $textarea.on('input', function(evt) {
       var lines = ($(this).val() + '\n').match(/\n/g).length;
-      $(this).height(lineHeight * lines);
+      $(this).height(lineHeight * lines); 
 
-      $('#messages-form-btn').on('click',function(){
-        location.reload()
-      })
+      // $('#messages-form-btn').on('click',function(){
+      //   location.reload()
+      // })
     });
     $('.message-image').click(function(){
       console.log('dada')
@@ -33,8 +33,5 @@ $(function(){
 
 
   });
-  $('.messages-form-btn').on('click',function(){
-    location.reload()
-  })
 
 })
