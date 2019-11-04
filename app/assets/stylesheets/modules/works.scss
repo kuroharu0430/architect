@@ -147,6 +147,8 @@
     
         }
         p{
+          word-wrap :break-word;
+          white-space:pre-wrap;    
           color:white;
           font-size:16px;
           line-height:30px;
