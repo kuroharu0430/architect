@@ -24,7 +24,6 @@ $(function(){
 
     });
     $('.message-image').click(function(){
-      console.log('dada')
       $(this).toggleClass("scale")
     })
 

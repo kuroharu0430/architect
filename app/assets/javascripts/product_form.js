@@ -37,4 +37,12 @@ $(".works_input_area").on("change",'.works_file_field',function(){
     $(`.image_destroy[for = product_product_images_attributes_${remove_index}__destroy]`).click()
   })
 
+    var $form_textarea = $('.form_text');
+    var form_lineHeight = parseInt($form_textarea.css('lineHeight'));
+    $form_textarea.on('input', function(evt) {
+      var lines = ($(this).val() + '\n').match(/\n/g).length+1;
+      $(this).height(form_lineHeight * lines); 
+
+    });
+
 })
