@@ -4,8 +4,6 @@
     <p>JUN OKUNO Architects</p>
   </div>
   <ul class="header">
-    <li class="header__list">about</li>
-    <li class="header__list">flow</li>
     <%if customer_signed_in?%>
       <%= link_to customer_messages_path(current_customer) do%>
         <li class="header__list contact">contact</li>
@@ -15,6 +13,8 @@
         <li class="header__list contact">contact</li>
       <%end%>
     <% end %>
+    <li class="header__list">about</li>
+    <li class="header__list">flow</li>
   </ul>    
 </div>
 

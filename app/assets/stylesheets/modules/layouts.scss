@@ -36,7 +36,7 @@ a{
 
 
 .nav{
-  // background:white;
+  background:white;
   position:fixed;
   display:flex;
   justify-content: space-between;
@@ -52,16 +52,21 @@ a{
     margin:0;
     padding:0;
     li{
+      opacity:0;
       line-height: 80px;
       vertical-align: bottom;
 
     }
   }
   &__name{
+    display:flex;
+    flex-direction:column;
     // background:white;
     padding-top:1em;
-    width:100%;
-    text-align:center;
+    white-space: pre;
+    transform:translate(20vw,20vh);
+    font-size:1.5em;
+    
     h1{
           // mix-blend-mode: difference;
     letter-spacing: 0.3em;
@@ -73,13 +78,30 @@ a{
 
     }
     p{
+      text-align:center;
       margin-top:0.5em;
       font-size:1.2em;
       letter-spacing: 0.2em;
 
     }
   }
+  .move{
+    animation-name:move;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay:1s;
+  }
+  @keyframes move {
+    0%{
+      transform:translate(20vw,20vh);
+      font-size:1.5em;
 
+    }
+    100%{
+      transform:translate(0,0);
+      font-size:1em;
+    }
+  }
 
 }
 .header{
