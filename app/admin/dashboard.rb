@@ -1,6 +1,15 @@
 ActiveAdmin.register_page "Dashboard" do
   menu priority: 1, label: proc { I18n.t("active_admin.dashboard") }
 
+  config.clear_action_items!
+
+  action_item :my_button1, only: :index do
+    link_to "Product new", new_product_path
+  end
+  action_item :my_button1, only: :index do
+    link_to "TOP画面へ", root_path
+  end
+
   content title: proc { I18n.t("active_admin.dashboard") } do
     div class: "blank_slate_container", id: "dashboard_default_message" do
       span class: "blank_slate" do
