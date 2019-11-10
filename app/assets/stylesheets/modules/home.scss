@@ -22,12 +22,6 @@
   0%{
     filter:brightness(100%);
   }
-  10%{
-    filter:brightness(100%);
-  }
-  50%{
-    filter:brightness(100%);
-  }
   100%{
     filter:brightness(100%);
   }
@@ -63,6 +57,7 @@
 }
 
 .top{
+  margin-top:80px;
   filter:grayscale(100%);
   opacity:0.1;
   position:relative;
@@ -115,7 +110,6 @@
       position:absolute;
       width:100vw;
       height:400px;
-      margin-top:100px;
       padding-top:210px;
       // margin-left:100px;
       padding-left:100px;
@@ -142,7 +136,6 @@
     width:70vw;
     position:relative;
     display:flex;
-    margin-top:80px;
     // box-shadow:10px 10px 10px grey;
     &-letter{
       // background: linear-gradient(transparent 50%, white 100%);
