@@ -27,6 +27,7 @@
       &-bar{
         clear:both;
         display:flex;
+        justify-content: space-between;
         margin-top:40px;
         width:100%;
         li{
@@ -57,8 +58,6 @@
           border:double 4px white;
           height:140px;
           width:100%;
-
-
         }
         
       }
