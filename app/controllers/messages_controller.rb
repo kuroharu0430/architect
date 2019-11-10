@@ -29,9 +29,9 @@ class MessagesController < ApplicationController
     last_message_id = params[:id].to_i
     @messages =@customer.messages.includes(:customer).where("id > #{last_message_id}")
     if @messages.present?
-      @flag = "true"
+      flag = "true"
     else
-      @flag = "false"
+      flag = "false"
     end
   end
 
