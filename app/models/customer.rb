@@ -5,6 +5,6 @@ class Customer < ApplicationRecord
          :recoverable, :rememberable, :validatable
          has_many :messages
   
-  enum state:{"施工主":0, "メッセージ不可":1}
+  enum state:{"メッセージのみ":0, "施工主":1, "メッセージ不可":10}
 
 end

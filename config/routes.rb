@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
-  devise_for :customers
+  devise_for :customers, :controllers =>{
+    registrations: 'customers/registrations',
+    sessions: 'customers/sessions',
+    passwords: 'customers/passwords'
+  }
+
   get 'customers/show'
   ActiveAdmin.routes(self)
   root to: "products#index"

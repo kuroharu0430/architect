@@ -9,6 +9,13 @@ class Customers::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
+  def create
+    super
+    self.resource = resource_class.send_reset_password_instructions(resource_params)
+    resource.state = 0
+    resource.save
+  end
+
   # POST /resource
   # def create
   #   super
