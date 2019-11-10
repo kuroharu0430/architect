@@ -28,6 +28,11 @@ class MessagesController < ApplicationController
     @messages = @customer.messages
     last_message_id = params[:id].to_i
     @messages =@customer.messages.includes(:customer).where("id > #{last_message_id}")
+    if @messages.present?
+      @id = 1
+    else
+      @id = 0
+    end
   end
 
 

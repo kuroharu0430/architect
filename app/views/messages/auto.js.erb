@@ -1,3 +1,3 @@
+id = <%= @id %>;
+console.log(id)
 $('.messages-main__chat').append('<%= j(render partial: 'message',collection: @messages) %>')
-var last_message_height =$('.messages-main').get(0).scrollHeight
-$('.messages-main').animate({scrollTop:last_message_height},1000);
