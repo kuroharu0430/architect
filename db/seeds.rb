@@ -12,3 +12,13 @@ AdminUser.create!(email: 'admin@gmail.com', password: '123456', password_confirm
 Customer.create!(name:'奥野 潤',  email: 'merryjun@msn.com', password: 'hanage0614', password_confirmation: 'hanage0614')
 Customer.create!(name:'kuroharu',email: 'kuroharu0430@gmail.com', password: 'sazanka3033', password_confirmation: 'sazanka3033')
 Customer.create!(name:'test_user',email: 'test@gmail.com', password: '123456', password_confirmation: '123456')
+
+Product.create!([
+  {name:'奈良県明日香村',text:'光にこだわってみました。', image: open("public/images/奈良県飛鳥村/IMG_0137.jpg"), date: '2016-06-15', place:'奈良県飛鳥村',purpose:'', scale:'', site_area:'', building_area:'', architectural_area:''},
+  {name:'brightly',text:'ピアノやバーカウンターを置いてください', image: open("public/images/brightly moonlight/IMG_0135.jpg"), date: '2016-06-15', place:'赤坂',purpose:'', scale:'', site_area:'', building_area:'', architectural_area:''},
+  {name:'美術館',text:'この時期桜は咲いていませんね。', image: open("public/images/大阪市立美術館/IMG_0129.jpg"), date: '2016-06-15', place:'大阪市',purpose:'', scale:'', site_area:'', building_area:'', architectural_area:''},
+  {name:'たて穴式住居',text:'ローソク持参でお願いします。そして、空を見上げてごらん。', image: open("public/images/たて穴式住居/IMG_0147.jpg"), date: '2016-06-15', place:'京都府長岡天神',purpose:'', scale:'', site_area:'', building_area:'', architectural_area:''},
+])
+# Product_image.create!(src:'',prodduct_id:'1')
+
+# Message.create!()
