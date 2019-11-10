@@ -6,7 +6,6 @@ $(function(){
     var reload_messages = function(){
       if (last_message_id < $('.message:last').attr("data-mesage_id")){
         var last_message_id = $('.message:last').attr("data-mesage_id")
-
         $.ajax({
           url:'messages/auto',
           type:'get',
