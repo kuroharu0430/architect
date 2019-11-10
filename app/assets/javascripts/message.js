@@ -11,12 +11,6 @@ $(function(){
         datatype:'json',
         data:{id: last_message_id} 
       })
-      // .done(function(data) {
-      //   console.log(data)
-      //   var last_message_height =$('.messages-main').get(0).scrollHeight
-      //   $('.messages-main').animate({scrollTop:last_message_height},1000);
-
-      //   })
     }
   }
   setInterval(reload_messages, 5000)
