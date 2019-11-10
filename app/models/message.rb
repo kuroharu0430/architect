@@ -4,5 +4,5 @@ class Message < ApplicationRecord
 
   validates :text, presence: true, length: {maximum: 300}
   
-  enum roll:{"管理者":0, "お客様":1}
+  enum roll:{"admin":0, "customer":1}
 end
