@@ -44,4 +44,8 @@ ProductImage.create!([
 
 ])
 
-# Message.create!()
+Message.create![(
+  {text:'', image:open(''),roll:'',customer_id:''}
+
+
+)]
