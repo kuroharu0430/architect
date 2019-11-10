@@ -20,27 +20,27 @@ Product.create!([
   {name:'たて穴式住居',text:'ローソク持参でお願いします。そして、空を見上げてごらん。', image: open("public/images/たて穴式住居/IMG_0147.jpg"), date: '2016-06-15', place:'京都府長岡天神',purpose:'', scale:'', site_area:'', building_area:'', architectural_area:''},
 ])
 
-Product_image.create!([
-  {id:'1',src:open('public/images/奈良県飛鳥村/IMG_0136.jpg'),product＿id:'1'},
-  # {src:open('public/images/奈良県飛鳥村/IMG_0138.jpg'),product＿id:'1'},
-  # {src:open('public/images/奈良県飛鳥村/IMG_0139.jpg'),product＿id:'1'},
-  # {src:open('public/images/奈良県飛鳥村/IMG_0140.jpg'),product＿id:'1'},
+ProductImage.create!([
+  {src:open('public/images/奈良県飛鳥村/IMG_0136.jpg'),product_id:'1'},
+  {src:open('public/images/奈良県飛鳥村/IMG_0138.jpg'),product_id:'1'},
+  {src:open('public/images/奈良県飛鳥村/IMG_0139.jpg'),product_id:'1'},
+  {src:open('public/images/奈良県飛鳥村/IMG_0140.jpg'),product_id:'1'},
 
-  # {src:open('public/images/brightly moonlight/IMG_0134.jpg'),product＿id:'2'},
-  # {src:open('public/images/brightly moonlight/IMG_0135.jpg'),product＿id:'2'},
-  # {src:open('public/images/brightly moonlight/IMG_0141.jpg'),product＿id:'2'},
+  {src:open('public/images/brightly moonlight/IMG_0134.jpg'),product_id:'2'},
+  {src:open('public/images/brightly moonlight/IMG_0135.jpg'),product_id:'2'},
+  {src:open('public/images/brightly moonlight/IMG_0141.jpg'),product_id:'2'},
 
-  # {src:open('public/images/大阪市立美術館/IMG_0127.jpg'),product＿id:'3'},
-  # {src:open('public/images/大阪市立美術館/IMG_0128.jpg'),product＿id:'3'},
-  # {src:open('public/images/大阪市立美術館/IMG_0130.jpg'),product＿id:'3'},
-  # {src:open('public/images/大阪市立美術館/IMG_0131.jpg'),product＿id:'3'},
-  # {src:open('public/images/大阪市立美術館/IMG_0132.jpg'),product＿id:'3'},
+  {src:open('public/images/大阪市立美術館/IMG_0127.jpg'),product_id:'3'},
+  {src:open('public/images/大阪市立美術館/IMG_0128.jpg'),product_id:'3'},
+  {src:open('public/images/大阪市立美術館/IMG_0130.jpg'),product_id:'3'},
+  {src:open('public/images/大阪市立美術館/IMG_0131.jpg'),product_id:'3'},
+  {src:open('public/images/大阪市立美術館/IMG_0132.jpg'),product_id:'3'},
   
-  # {src:open('public/images/たて穴式住居/IMG_0142.jpg'),product＿id:'4'},
-  # {src:open('public/images/たて穴式住居/IMG_0143.jpg'),product＿id:'4'},
-  # {src:open('public/images/たて穴式住居/IMG_0144.jpg'),product＿id:'4'},
-  # {src:open('public/images/たて穴式住居/IMG_0145.jpg'),product＿id:'4'},
-  # {src:open('public/images/たて穴式住居/IMG_0146.jpg'),product＿id:'4'},
+  {src:open('public/images/たて穴式住居/IMG_0142.jpg'),product_id:'4'},
+  {src:open('public/images/たて穴式住居/IMG_0143.jpg'),product_id:'4'},
+  {src:open('public/images/たて穴式住居/IMG_0144.jpg'),product_id:'4'},
+  {src:open('public/images/たて穴式住居/IMG_0145.jpg'),product_id:'4'},
+  {src:open('public/images/たて穴式住居/IMG_0146.jpg'),product_id:'4'},
 
 ])
 
