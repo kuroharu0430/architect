@@ -7,13 +7,13 @@
     <%if customer_signed_in?%>
       <%= link_to customer_messages_path(current_customer) do%>
         <li class="header__list contact">contact
-        <p>◆ログイン画面へ</p>
+        <%# <p>◆ログイン画面へ</p> %>
         </li>
       <%end%>
     <% else %>
       <%= link_to customer_session_path do%>
         <li class="header__list contact">contact
-        <p>◆ログイン画面へ</p>
+        <%# <p>◆ログイン画面へ</p> %>
         </li>
       <%end%>
     <% end %>
