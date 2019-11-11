@@ -8,7 +8,4 @@ $(function(){
       $('.top__card-letter' ).show("drop",{direction:"down"},1000)
       $('.top__left-message, .header__list').fadeIn(1000)
     })
-
-
-
 })
