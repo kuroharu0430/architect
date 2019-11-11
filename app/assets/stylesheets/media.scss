@@ -1,0 +1,20 @@
+
+
+@media screen and (max-width:1000px) {
+  /*スマホ用のcssを記述*/
+    .works__left{
+      width:90px;
+      font-size:10px;
+    }
+    .works__box{
+      display:none;
+    }
+  }
+
+  @media screen and (max-width:750px) {
+    .messages{
+      width:90vw;
+
+    }
+
+  }

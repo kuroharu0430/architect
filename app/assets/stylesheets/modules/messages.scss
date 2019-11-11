@@ -30,7 +30,7 @@ $message_width:750px;
     display:flex;
     justify-content: flex-start;
     height:100px;
-    width:$message_width;
+    width:100%;
     font-size:2em;
     &:after{
       position:absolute;
