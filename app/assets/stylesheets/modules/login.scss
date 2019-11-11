@@ -1,8 +1,16 @@
-.login_form{
-  width:500px;
+@import "./mixin/mixin";
+
+.login_form_wapper{
+  width:$message_width;
+  height:100vh;
+  background-image:url('/winter.jpg');
   margin:0 auto;
+}
+.login_form{
+  width:400px;
   padding:30px 50px;
-  background:#eee;
+  background:rgba(#eee, 0.9);
+
   a{
     width:100px;
     margin-top:30px;
@@ -16,7 +24,19 @@
 .login__hedding{
   font-size:1.5em;
 }
-
 .signup{
   white-space: nowrap;
+}
+#customer_email{
+  width:100%;
+}
+#customer_password{
+  width:100%;
+}
+#customer_password_confirmation{
+  width:100%;
+}
+
+#customer_name{
+  width:100%;
 }
