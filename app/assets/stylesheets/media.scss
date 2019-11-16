@@ -1,7 +1,7 @@
 
 
-@media screen and (max-width:1000px) {
-  /*スマホ用のcssを記述*/
+@media screen and (max-width:960px) {
+
     .works__slide{
       width:90px;
     }
@@ -10,9 +10,10 @@
     }
   }
 
-  @media screen and (max-width:750px) {
-    .messages{
-      width:100vw;
 
-    }
+  @media screen and (max-width:560px) {
+      body{
+        font-size:8px;
+      }
+      
   }
