@@ -3,6 +3,7 @@ $('.works__slide').html('<%= j(render partial: 'show') %>')
 
 clearInterval(product_slide)
 var works_height=$(".works__slide").offset().top - $('.nav').height()
+console.log($('.nav').height())
 $('html, body').animate({scrollTop:works_height});
 
 $('.works-text').text('<%= @product.text %>')
