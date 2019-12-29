@@ -45,10 +45,10 @@ ProductImage.create!([
 ])
 
 Message.create!([
-  {text:'ようこそ', roll:0,customer_id:'3'},
-  {text:'テスト用なのでご自由に使ってみてください',roll:1,customer_id:'3'},
-  {text:'管理者は右',roll:0,customer_id:'3'},
-  {text:'お客様は左にメッセージが表示されます',roll:1,customer_id:'3'},
-  {text:'管理者のみ写真の添付ができます', image:open('public/photo-message.jpg'),roll:0,customer_id:'3'},
+  {text:'ようこそ', roll:0,customer_id:'1'},
+  {text:'テスト用なのでご自由に使ってみてください',roll:1,customer_id:'1'},
+  {text:'管理者は右',roll:0,customer_id:'1'},
+  {text:'お客様は左にメッセージが表示されます',roll:1,customer_id:'1'},
+  {text:'管理者のみ写真の添付ができます', image:open('public/photo-message.jpg'),roll:0,customer_id:'1'},
 
 ])
